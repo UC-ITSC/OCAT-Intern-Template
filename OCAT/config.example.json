@@ -1,0 +1,9 @@
+{
+    "name": "YOUR_NAME -- LOCAL",
+    "server": {
+        "port": 8000
+    },
+    "api": {
+        "url": "http://localhost:3000"
+    }
+}
