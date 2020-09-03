@@ -30,6 +30,6 @@
     "zipkin-transport-http": "^0.4.0"
   },
   "devDependencies": {
-    "eslint": "^3.5.0"
+    "eslint": "^4.18.2"
   }
 }
