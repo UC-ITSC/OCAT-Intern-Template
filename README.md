@@ -33,6 +33,7 @@
             2. Reach out to one of your fellow OCAT interns and ask them nicely to review your code.  Include a link to the Pull Request you'd like them to review
             3. Take any suggestions with a grain of salt.  Remember, this is YOUR application.  Make any changes you agree with and then merge the Pull Request
         2. Reviewing a Pull Request (PR)
+            - [Reviewing a Pull Request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews)
             1. Go the link supplied by whichever OCAT intern has requested a review from you
             2. Look through their code, offering suggestions and critiques
                 - You should try to:
@@ -84,18 +85,18 @@ The application must be architected with two "layers" using an API model and pse
 
 ## Tasks
 
-### Setup
+### A. Setup
 
-1. Clone the Template Repository
+1. Copy the Template Repository
 NOTE: You can name this whatever you want, just make certain that you leave it "Public" so that others can view your code
     - Template:
-        - [OCAT_TEMPLATE](https://github.com/UC-ITSC/OCAT_TEMPLATE)
+        - [OCAT_Intern_Template](https://github.com/UC-ITSC/OCAT_Intern_Template)
     - Resources: 
         - [Creating a Respository from a Template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
 2. Copy the Template Project Board
     - NOTE: This is something you should keep constantly up-to-date.  It is how we will track your progress, and it will facilitate code review and collaboration with your OCAT internship peers.
         - Template:
-            - [OCAT Project Board](https://github.com/UC-ITSC/OCAT_TEMPLATE/projects/1)
+            - [OCAT Project Board](https://github.com/UC-ITSC/OCAT_Intern_Template/projects/1)
         - Resources:
             - [Copying a Project Board](https://docs.github.com/en/github/managing-your-work-on-github/copying-a-project-board)
 3. Add the Provided Issues to your Project Board
@@ -105,7 +106,29 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
         - [Creating an Issue](https://docs.github.com/en/github/managing-your-work-on-github/creating-an-issue)
         - [Adding Issues to a Project Board](https://docs.github.com/en/github/managing-your-work-on-github/adding-issues-and-pull-requests-to-a-project-board#adding-issues-and-pull-requests-to-a-project-board-from-the-sidebar)
 
-### Requirements
+### B. Get the Application Running
+
+1. Clone your new repository
+    - [Cloning a Repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+2. OCAT
+    - Navigate into the directory
+    - npm install [npm install](https://docs.npmjs.com/cli/install#:~:text=npm%20install%20(in%20package%20directory,directory)%20as%20a%20global%20package.)
+    - npm run build
+    - Open a second terminal
+        1. Terminal 1
+            - npm run dev
+        2. Terminal 2
+            - npm run webpack:dev
+3. API
+    - Navigate into the directory
+    - npm install [npm install](https://docs.npmjs.com/cli/install#:~:text=npm%20install%20(in%20package%20directory,directory)%20as%20a%20global%20package.)
+    - npm run dev
+4. Database
+    - [PostgreSQL Setup Tutorial](https://www.postgresqltutorial.com/postgresql-getting-started/)
+5. Verify that the config.json for both directories is correct
+    - Begins as config.example.json and needs to be modified to match your environment
+
+### C. Requirements
 - NOTE: Please do any login-related pieces near the end.  Otherwise, you may spend the entire time developing a login process and you will not have much to show come presentation time.
 - NOTE: All work should be done on a separate "branch" so that it can be code reviewed.  Below are instructions on how to create a new branch:
     - [Creating a branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-branches#creating-a-branch)
@@ -189,6 +212,7 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
 - PostgreSQL
     - [Documentation](https://www.postgresql.org/)
     - [Download](https://www.postgresql.org/download/)
+    - [PostgreSQL Setup Tutorial](https://www.postgresqltutorial.com/postgresql-getting-started/)
     - Access the Database
         - Windows developers should use -> [pgAdmin](https://www.pgadmin.org/download/)
         - Mac developers should use -> [postico](https://eggerapps.at/postico/)
