@@ -112,7 +112,8 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
     - [Cloning a Repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 2. OCAT
     - Navigate into the directory
-    - npm install [npm install](https://docs.npmjs.com/cli/install#:~:text=npm%20install%20(in%20package%20directory,directory)%20as%20a%20global%20package.)
+    - npm install
+        - [npm install](https://docs.npmjs.com/cli/install#:~:text=npm%20install%20(in%20package%20directory,directory)%20as%20a%20global%20package.)
     - npm run build
     - Open a second terminal
         1. Terminal 1
@@ -121,7 +122,8 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
             - npm run webpack:dev
 3. API
     - Navigate into the directory
-    - npm install [npm install](https://docs.npmjs.com/cli/install#:~:text=npm%20install%20(in%20package%20directory,directory)%20as%20a%20global%20package.)
+    - npm install
+        - [npm install](https://docs.npmjs.com/cli/install#:~:text=npm%20install%20(in%20package%20directory,directory)%20as%20a%20global%20package.)
     - npm run dev
 4. Database
     - [PostgreSQL Setup Tutorial](https://www.postgresqltutorial.com/postgresql-getting-started/)
