@@ -78,14 +78,21 @@ The application must be architected with two "layers" using an API model and pse
 - The below diagram resembles what you should attempt to reproduce:
 ![OCAT Sample Architecture](./readme_files/OCAT_Architecture.png)
 
+
+## Navigating the OCAT File Structure
+
+This is going to be your best friend.  The image below shows how you should be sending requests and where you should be placing the logic.
+ - client components -> client services ->  server routes -> server libs -> API routes -> API libs -> database
+![OCAT File Structure Diagram](./readme_files/OCAT_File_Structure.png)
+
 ## Roles
 
 - User
 - Supervisor
 
-## Tasks
+## Assignments
 
-### A. Setup
+### A. Github Setup
 
 1. Copy the Template Repository
 NOTE: You can name this whatever you want, just make certain that you leave it "Public" so that others can view your code
@@ -112,38 +119,33 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
     - [Cloning a Repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 2. OCAT
     - Navigate into the directory
+    - Verify that the config.json for both directories is correct
+        - Begins as config.example.json and needs to be modified to match your environment
     - npm install
         - [npm install](https://docs.npmjs.com/cli/install#:~:text=npm%20install%20(in%20package%20directory,directory)%20as%20a%20global%20package.)
     - npm run build
-    - Open a second terminal
+    - Open a second terminal window
         1. Terminal 1
             - npm run dev
         2. Terminal 2
             - npm run webpack:dev
-3. API
-    - Navigate into the directory
-    - npm install
-        - [npm install](https://docs.npmjs.com/cli/install#:~:text=npm%20install%20(in%20package%20directory,directory)%20as%20a%20global%20package.)
-    - npm run dev
-4. Database
-    - [PostgreSQL Setup Tutorial](https://www.postgresqltutorial.com/postgresql-getting-started/)
-5. Verify that the config.json for both directories is correct
-    - Begins as config.example.json and needs to be modified to match your environment
 
-### C. Requirements
+### C. Features
 - NOTE: Please do any login-related pieces near the end.  Otherwise, you may spend the entire time developing a login process and you will not have much to show come presentation time.
 - NOTE: All work should be done on a separate "branch" so that it can be code reviewed.  Below are instructions on how to create a new branch:
     - [Creating a branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-branches#creating-a-branch)
 
 4. Allow Users to submit an assessment with the following information
     - NOTE: An "assessment" has a type, five questions, and two responses per question -> Use the example info here: [OCAT Assessment Info](./readme_files/assessment_info.md)
-        - Instrument (text)
+        - Instrument Name (static text field) - this is the type of assessment that is currently being conducted -> Example: Cat Behavioral Instrument
         - Cat Name (text) -> Example: Mr. Fluffykins
         - Cat Date of Birth (date)
         - Score (integer calculated by the sum of all responses)
         - Risk Level (text - low [0-1], medium [2-3], high [4-5] determined by the calculated score)
         - Audit log of when the assessment was created/deleted (datetime with timezone)
     - Recommend using [React Hook Form](https://react-hook-form.com/)
+    - Database Setup Help:
+        - [PostgreSQL Setup Tutorial](https://www.postgresqltutorial.com/postgresql-getting-started/)
 5. Implement a bootstrap style template to make your site look presentable
     - NOTE: Do not spend too much time on this.  We want the application to look good but not at the risk of hindering the overall completion of your project
 6. Allow Users and Supervisors to sort/search/filter/review submitted assessments from a list
@@ -156,9 +158,6 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
     - This should be a soft delete in the database (a soft delete does not remove the data from the database, it sets a flag on the record so it does not show up on the front-end)
     - Recommend using [bookshelf-soft-delete](https://www.npmjs.com/package/bookshelf-soft-delete)
 9. Prepare your presentation!
-
-## Navigating the OCAT File Structure
-![OCAT File Structure Diagram](./readme_files/OCAT_File_Structure.png)
 
 ## Resources
 
