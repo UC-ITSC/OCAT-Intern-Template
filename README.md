@@ -82,7 +82,7 @@ The application must be architected with two "layers" using an API model and pse
 ## Navigating the OCAT File Structure
 
 This is going to be your best friend.  The image below shows how you should be sending requests and where you should be placing the logic.
- - client components -> client services ->  server routes -> server libs -> API routes -> API libs -> database
+ - client components -> client services ->  server routes -> server libs -> API routes -> API microservices -> database
 ![OCAT File Structure Diagram](./readme_files/OCAT_File_Structure.png)
 
 ## Roles
