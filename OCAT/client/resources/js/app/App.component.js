@@ -8,7 +8,7 @@ export function App() {
   return <>
       <BrowserRouter>
         <Route path="/" component={DashboardBulletin} />
-        {/* <Route path="/assessment/new" component={AssessmentNew} /> */}
+        <Route path="/assessment/new" component={AssessmentNew} />
         {/* <Route path="/assessment/list" component={AssessmentList} /> */}
       </BrowserRouter>
   </>;

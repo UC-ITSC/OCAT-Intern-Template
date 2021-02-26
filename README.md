@@ -172,7 +172,7 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
     - Video: [React Router Tutorial](https://www.youtube.com/watch?v=Law7wfdg_ls)
 
 - Bootstrap
-    - [w3c tutorial](https://www.w3schools.com/bootstrap4/)
+    - [Bootstrap Documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
     - [Bootstrap Templates](https://github.com/therebelrobot/awesome-bootstrap#templates)
     - Video: [Make a React Website with Bootstrap - Beginners](https://www.youtube.com/watch?v=RcfvUWJqHOs)
 
