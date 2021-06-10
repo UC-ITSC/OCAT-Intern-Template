@@ -32,7 +32,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.js?$/,
+        test: /\.(js|jsx)?$/,
         include: [
           path.resolve(__dirname, `client`),
         ],
@@ -55,7 +55,7 @@ module.exports = {
       `node_modules`,
       `shared`,
     ],
-    extensions: [ `.js`, `.css` ],
+    extensions: [ `.js`, `.jsx`, `.css` ],
   },
   profile: false,
   bail: true,
