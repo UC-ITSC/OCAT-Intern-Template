@@ -1,9 +1,9 @@
 module.exports = (res, message, data = {}, next) => {
   res.json({
-    status: `SUCCESS`,
+    data,
     message,
-    data
+    status: `SUCCESS`,
   });
-  
+
   next();
 };

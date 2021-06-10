@@ -1,0 +1,10 @@
+{
+  "watch": [
+    "src",
+    "config",
+    "index.js",
+    "config.json"
+  ],
+  "ext": ".js,.json",
+  "ignore": []
+}

@@ -5,9 +5,9 @@ const RouteLoader = require(`./RouteLoader`);
 const Password = require(`./Password`);
 
 module.exports = {
-  config,
   ErrorHandler,
+  Password,
   ResponseHandler,
   RouteLoader,
-  Password
+  config,
 };
