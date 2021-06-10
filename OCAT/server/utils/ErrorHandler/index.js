@@ -1,10 +1,9 @@
 exports.handleServerError = (req, err, res, message = `An unknown error occurred`) => {
-
   res
     .status(500)
     .json({
+      message,
       status: `ERROR`,
-      message
     });
 };
 
@@ -12,7 +11,7 @@ exports.handleForbiddenError = (res, message = `You are not allowed to make this
   res
     .status(403)
     .json({
+      message,
       status: `FORBIDDEN`,
-      message
     });
 };

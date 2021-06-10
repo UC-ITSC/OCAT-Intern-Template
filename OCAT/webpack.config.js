@@ -1,80 +1,63 @@
+/* eslint-disable sort-keys */
 const path = require(`path`);
 const webpack = require(`webpack`);
-const pkg = require(`./package.json`);
 
 module.exports = {
   mode: `development`,
-  devtool : `eval-source-map`,
+  devtool: `eval-source-map`,
   entry: {
-    app: `./client/resources/js/app.module.js`,
+    app: `./client/index.jsx`,
   },
   output: {
     path: path.resolve(__dirname, `public`, `js`),
-    filename: `[name].bundle.js`
+    filename: `[name].bundle.js`,
+    publicPath: `/js/`,
   },
   module: {
     rules: [
       {
         test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-        loader: `url-loader?limit=100000`
+        loader: `url-loader?limit=100000`,
       },
       {
         test: /\.scss?$/,
         loaders: [
-          `style-loader`, `css-loader`, `sass-loader`
-        ]
+          `style-loader`, `css-loader`, `sass-loader`,
+        ],
       },
       {
         test: /\.css?$/,
         loaders: [
-          `style-loader`, `css-loader`
-        ]
+          `style-loader`, `css-loader`,
+        ],
       },
       {
         test: /\.js?$/,
         include: [
-          path.resolve(__dirname, `client`, `resources`, `js`)
+          path.resolve(__dirname, `client`),
         ],
         exclude: [],
         use: [
-          {
-            loader: `babel-loader`,
-            options: {
-              presets: [
-                "@babel/preset-env",
-                "@babel/preset-react"
-              ],
-              plugins: [
-                "@babel/plugin-transform-runtime",
-                "@babel/plugin-proposal-class-properties",
-              ],
-              compact: false
-            }
-          },
-          {
-            loader: `imports-loader?jQuery=jquery,$=jquery`
-          }
-        ]
-      }
-    ]
+          { loader: `babel-loader` },
+          { loader: `imports-loader` },
+        ],
+      },
+    ],
   },
   plugins: [
     new webpack.ProvidePlugin({
       $: `jquery`,
-      jQuery: `jquery`
+      jQuery: `jquery`,
     }),
-    new webpack.DefinePlugin({
-      REPLACE_APP_VERSION: JSON.stringify(pkg.version)
-    })
   ],
   resolve: {
     modules: [
       `node_modules`,
-      `shared`
+      `shared`,
     ],
-    extensions: [ `.js`, `.css` ]
+    extensions: [ `.js`, `.css` ],
   },
   profile: false,
   bail: true,
-  cache: true
+  cache: true,
 };
