@@ -9,7 +9,7 @@
   - The Risk Assessment System is a Web-based Application that allows for assessing the risk of offender [recidivism](https://nij.ojp.gov/topics/corrections/recidivism).  By assessing the likelihood that an offender might commit another offense, the system helps officers determine how best to help the offender moving forward.  In ORAS, we do this by automatically generating caseplans, reports, and maintaining the full timeline of an offender's record while they exist in the system.  This process was developed based on research performed by the UC Corrections Institute (UCCI) and has been proven to reduce the recidivism of offenders over time.
 
 - The OCAT Internship Project
-  - Through OCAT, you will have the opportunity to explore a core piece of ORAS by building an interface for both creating assessments and monitoring assessments previously performed by users.  Your ITSC mentors will guide you through this process, but we highly suggest that you make frequent use of your OCAT internship peers.  To be clear, we do not want you copying code or handing out answers to other interns.  However, this is a collaborative process, and asking questions when you're confused is an important part of learning!  On the flipside of that, teaching someone else or helping them through a problem is the best way to further cement that knowledge in your own mind.  So ask questions when you're stuck and help point your fellow teammates in the right direction!  Good luck!
+  - Through OCAT, you will have the opportunity to explore a core piece of ORAS by building an interface for both creating assessments and monitoring assessments previously performed by users.  Your ITSC mentors will guide you through this process, but we highly suggest that you make frequent use of your OCAT internship peers.  To be clear, we do not want you copying code or handing out answers to other interns.  However, this is a collaborative process, and asking questions when you're confused is an important part of learning!  On the flip-side of that, teaching someone else or helping them through a problem is the best way to further cement that knowledge in your own mind.  So ask questions when you're stuck and help point your fellow teammates in the right direction!  Good luck!
 
 ## ITSC Guidelines
 
@@ -52,7 +52,7 @@
   - [git](https://git-scm.com/) and [Github](https://github.com/)
 - Front-End Framework
   - [React.js](https://reactjs.org/)
-  - Style Toolkit -> [Bootstrap](https://getbootstrap.com/)
+  - Style Toolkit -> [React-Bootstrap](https://react-bootstrap.github.io/)
 - Back-End Framework
   - [Express](http://expressjs.com/)
   - [Node.js](https://nodejs.org/en/)
@@ -68,7 +68,7 @@
 
 ## Architecture
 
-The application must be architected with two "layers" using an API model and pseudo-Microservices (the "skeleton" for this has already been provided within the template repository you'll start with). Once the HTML page is rendered, all future communication between the client/server should be done using HTTP requests sending/receiving JSON.
+The application must be created with two "layers" using an API model and pseudo-microservices (the "skeleton" for this has already been provided within the template repository you'll start with). Once the HTML page is rendered, all future communication between the client/server should be done using HTTP requests sending/receiving JSON.
 
 - API: thin layer allowing for directing of requests from the front-end to the microservices.  Allows for outside integration.
   - [Basic API explanation](https://www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/)
@@ -77,14 +77,11 @@ The application must be architected with two "layers" using an API model and pse
   - [CRUD Basics](https://www.codecademy.com/articles/what-is-crud)
 
 - The below diagram resembles what you should attempt to reproduce:
-![OCAT Sample Architecture](./docs/OCAT_Architecture.png)
+![OCAT Sample Architecture](./docs/attachments/OCAT_Architecture.png)
 
 ## Navigating the OCAT File Structure
 
-This is going to be your best friend.  The image below shows how you should be sending requests and where you should be placing the logic.
-
-- client components -> client services ->  server routes -> server libs -> API routes -> API microservices -> database
-![OCAT File Structure Diagram](./docs/OCAT_File_Structure.png)
+TODO: Talk about code tours here
 
 ## Roles
 
@@ -100,7 +97,7 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
     - Template:
         - [OCAT_Intern_Template](https://github.com/UC-ITSC/OCAT_Intern_Template)
     - Resources:
-        - [Creating a Respository from a Template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
+        - [Creating a Repository from a Template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
 2. Copy the Template Project Board
     - NOTE: This is something you should keep constantly up-to-date.  It is how we will track your progress, and it will facilitate code review and collaboration with your OCAT internship peers.
         - Template:
@@ -118,7 +115,9 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
 
 1. Clone your new repository
     - [Cloning a Repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
-2. OCAT
+2. [Install NodeJS 12.x](docs/install_nodejs.md) on your computer (__Do NOT install Node 14 or the project will not run__)
+3. [Install PostgreSQL](docs/install_postgres.md)
+4. OCAT
     - Navigate into the directory
     - Verify that the config.json for both directories is correct
         - Begins as config.example.json and needs to be modified to match your environment
@@ -137,7 +136,7 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
 - NOTE: All work should be done on a separate "branch" so that it can be code reviewed.  Below are instructions on how to create a new branch:
   - [Creating a branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-branches#creating-a-branch)
 
-4. Allow Users to submit an assessment with the following information
+1. Allow Users to submit an assessment with the following information
     - NOTE: An "assessment" has a type, five questions, and two responses per question -> Use the example info here: [OCAT Assessment Info](./docs/assessment_info.md)
         - Instrument Name (static text field) - this is the type of assessment that is currently being conducted -> Example: Cat Behavioral Instrument
         - Cat Name (text) -> Example: Mr. Fluffykins
@@ -146,20 +145,18 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
         - Risk Level (text - low [0-1], medium [2-3], high [4-5] determined by the calculated score)
         - Audit log of when the assessment was created/deleted (datetime with timezone)
     - Recommend using [React Hook Form](https://react-hook-form.com/)
-    - Database Setup Help:
-        - [PostgreSQL Setup Tutorial](https://www.postgresqltutorial.com/postgresql-getting-started/)
-5. Implement a bootstrap style template to make your site look presentable
+2. Implement a bootstrap style template to make your site look presentable
     - NOTE: Do not spend too much time on this.  We want the application to look good but not at the risk of hindering the overall completion of your project
-6. Allow Users and Supervisors to sort/search/filter/review submitted assessments from a list
+3. Allow Users and Supervisors to sort/search/filter/review submitted assessments from a list
     - Should only return non-deleted assessments
     - The list should include (at minimum) cat name, cat date of birth, instrument, score, risk level, and creation date
     - Recommend using [React Table](https://www.npmjs.com/package/react-table)
-7. Allow Supervisors to log into the system
+4. Allow Supervisors to log into the system
     - This must authenticate against the database using [Bcrypt](https://www.npmjs.com/package/bcrypt)
-8. Allow Supervisors to delete assessment submissions
+5. Allow Supervisors to delete assessment submissions
     - This should be a soft delete in the database (a soft delete does not remove the data from the database, it sets a flag on the record so it does not show up on the front-end)
     - Recommend using [bookshelf-soft-delete](https://www.npmjs.com/package/bookshelf-soft-delete)
-9. Prepare your presentation!
+6. Prepare your presentation!
 
 ## Resources
 
@@ -214,8 +211,6 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
 
 - PostgreSQL
   - [Documentation](https://www.postgresql.org/)
-  - [Download](https://www.postgresql.org/download/)
-  - [PostgreSQL Setup Tutorial](https://www.postgresqltutorial.com/postgresql-getting-started/)
   - Access the Database
     - Windows developers should use -> [pgAdmin](https://www.pgadmin.org/download/)
     - Mac developers should use -> [postico](https://eggerapps.at/postico/)
@@ -227,17 +222,8 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
 
 - Design principles
   - SOLID: [The First Five Principles of Object Oriented Design](https://scotch.io/bar-talk/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
-  - DRY: [Dont Repeat Yourself](https://medium.com/better-programming/keeping-your-code-dry-1105377c9c80)
+  - DRY: [Don't Repeat Yourself](https://medium.com/better-programming/keeping-your-code-dry-1105377c9c80)
   - KISS: [Keep it Short and Simple](https://www.interaction-design.org/literature/article/kiss-keep-it-simple-stupid-a-design-principle)
-
-- Create a PostgreSQL Docker Container
-  - Steps for Windows:
-    - Update to latest feature update: [Get the May 2020 Update](https://www.digitalcitizen.life/windows-10-update-assistant)
-    - Download Docker Desktop: [Docker](https://www.docker.com/products/docker-desktop)
-    - Open a terminal and run this command: docker run -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=YOUR_PASSWORD_GOES_HERE -d postgres
-  - Steps for Mac:
-    - Download Docker Desktop: [Docker](https://www.docker.com/products/docker-desktop)
-    - Open a terminal and run this command: docker run -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=YOUR_PASSWORD_GOES_HERE -d postgres
 
 - Functional Programming in Javascript
   - [Playlist from Fun Fun Function](https://www.youtube.com/watch?v=BMUiFMZr7vk&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84)

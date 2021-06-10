@@ -10,5 +10,17 @@
   "eslint.workingDirectories": [
     "./API",
     "./OCAT"
+  ],
+  "cSpell.words": [
+    "ITSC",
+    "Microservice",
+    "Microservices",
+    "OCAT",
+    "ORAS",
+    "UCCI",
+    "bcrypt's",
+    "caseplans",
+    "postgres",
+    "postico"
   ]
 }
