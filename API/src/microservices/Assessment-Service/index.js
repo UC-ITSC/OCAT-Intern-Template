@@ -12,7 +12,7 @@ exports.submit = (assessment) =>
     }
   });
 
-  exports.getList = () =>
+exports.getList = () =>
   new Promise(async (resolve, reject) => {
     try {
     // use the bookshelf model Assessments from API/src/microservices/Database to fetch

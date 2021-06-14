@@ -10,9 +10,9 @@ export const AssessmentList = () => {
     fetchAssessments(async () => {
       const assessments = await AssessmentService.getList();
       setAssessments(assessments);
-    })
+    });
     fetchAssessments();
-  }, [])
+  }, []);
 
   return (
     <div>

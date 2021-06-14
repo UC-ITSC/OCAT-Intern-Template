@@ -10,6 +10,11 @@ exports.submit = (assessment) => new Promise((resolve, reject) => {
   // this function sends a request to the API
   // finish the logic to handle the response when returned from the API
   request(options, (error, response) => {
+    if (error) {
+      reject(error);
+    }
+
+    resolve();
   });
 });
 

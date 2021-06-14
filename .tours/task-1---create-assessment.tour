@@ -14,22 +14,12 @@
     },
     {
       "file": "OCAT/client/services/AssessmentService.js",
-      "description": "- Axios Service Request\n\nSend a POST request using the axios library that contains the assessment data from the front-end form.  This will go to the back-end Express server @ OCAT/server/routes/AssessmentAPI/index.js",
-      "line": 6,
-      "selection": {
-        "start": {
-          "line": 7,
-          "character": 87
-        },
-        "end": {
-          "line": 7,
-          "character": 105
-        }
-      }
+      "description": "- Axios Service Request\n\nInside the AssessmentService.submit() function, send a POST request using the axios library that contains the assessment data from the front-end form.  This will go to the back-end Express server @ OCAT/server/routes/AssessmentAPI/index.js",
+      "line": 6
     },
     {
       "file": "OCAT/server/routes/AssessmentAPI/index.js",
-      "description": "- Express Router\n\nReceive the front-end axios request and call the .submit function from the AssessmentService in OCAT/server/libs/AssessmentService/index.js.  Pass in the assessment data from the request body.",
+      "description": "- Express Router\n\nReceive the front-end axios request and call the .submit() function from the AssessmentService in OCAT/server/libs/AssessmentService/index.js.  Pass in the assessment data from the request body.",
       "line": 7
     },
     {

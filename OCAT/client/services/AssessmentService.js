@@ -3,8 +3,9 @@ import axios from "axios";
 export class AssessmentService {
   static async submit(assessment) {
     try {
-      
-      // Choose the correct method, url, and data to send in a request to the express OCAT/server/routes
+
+      // Choose the correct method, url, and data to send
+      // in a request to the express OCAT/server/routes/Assessment/index.js
       await axios({});
 
       return;
@@ -16,7 +17,8 @@ export class AssessmentService {
 
   static async getList() {
     try {
-      // Choose the correct method, url, and data to send in a request to the express OCAT/server/routes
+      // Choose the correct method, url, and data to send
+      // in a request to the express OCAT/server/routes/Assessment/index.js
       await axios({});
 
       return;
