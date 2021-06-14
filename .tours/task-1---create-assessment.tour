@@ -1,0 +1,57 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Task 1 - Create Assessment",
+  "steps": [
+    {
+      "file": "OCAT/config.example.json",
+      "description": "- config.json\n\n1. Duplicate this file by using copy + paste\n2. Rename it to config.json\n3. Modify the contents of the file to fit your environment (you should only need to supply YOUR_NAME in the \"name\" attribute)",
+      "line": 1
+    },
+    {
+      "file": "OCAT/client/pages/Assessments/NewAssessment.jsx",
+      "description": "- Create Form\n\nUse the provided Assessment Info in /docs/assessment_info.md to create an assessment form for the front-end.\n\nREMINDER: In order to run the application, you will have to run some commands.\n\nCONFIG.JSON:\n- Verify that the config.json for both directories is correct\n  - Begins as config.example.json and needs to be modified to match your environment\n\nCOMMANDS:\n- npm install\n- npm run build\n- split your vscode terminal window into two\n  - Terminal 1\n    - npm run dev\n  - Terminal 2\n    - npm run webpack:dev\n",
+      "line": 6
+    },
+    {
+      "file": "OCAT/client/services/AssessmentService.js",
+      "description": "- Axios Service Request\n\nSend a POST request using the axios library that contains the assessment data from the front-end form.  This will go to the back-end Express server @ OCAT/server/routes/AssessmentAPI/index.js",
+      "line": 6,
+      "selection": {
+        "start": {
+          "line": 7,
+          "character": 87
+        },
+        "end": {
+          "line": 7,
+          "character": 105
+        }
+      }
+    },
+    {
+      "file": "OCAT/server/routes/AssessmentAPI/index.js",
+      "description": "- Express Router\n\nReceive the front-end axios request and call the .submit function from the AssessmentService in OCAT/server/libs/AssessmentService/index.js.  Pass in the assessment data from the request body.",
+      "line": 7
+    },
+    {
+      "file": "OCAT/server/libs/AssessmentService/index.js",
+      "description": "- request Request\n\nSend a POST request containing the assessment data passed down from the front-end form.  This request will be sent to API/src/routes/Assessment/index.js",
+      "line": 5
+    },
+    {
+      "file": "API/config.example.json",
+      "description": "- config.json\n\n1. Setup your PostgreSQL instance using the step-by-step instructions provided in the README.md\n2. Duplicate this file using copy + paste\n3. Rename this file to config.json\n4. Supply the correct values to match your PostgreSQL instance",
+      "line": 1
+    },
+    {
+      "file": "API/src/routes/Assessment/index.js",
+      "description": "- API Router\n\nReceive the POST request from the front-end server and call the .submit() function from API/src/microservices/Assessment-Service/index.js.  Pass in the assessment data from the request parameters.",
+      "line": 13
+    },
+    {
+      "file": "API/src/microservices/Assessment-Service/index.js",
+      "description": "- Assessment Microservice\n\nThis step will introduce an ORM (Object-Relational Mapping) tool we use for this project called \"Bookshelf.js\" that works in tandem with \"knex.js\"\nUse Bookshelf to save the assessment data from the front-end form into the PostgreSQL database.\n\nHINT: use Bookshelf's .save() function: https://bookshelfjs.org/api.html#Model-instance-save\n",
+      "line": 8
+    }
+  ],
+  "ref": "master"
+}

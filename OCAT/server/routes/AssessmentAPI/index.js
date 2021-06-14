@@ -3,6 +3,7 @@ const { AssessmentService } = require(`../../libs`);
 const { ErrorHandler } = require(`../../utils`);
 
 router.post(`/submit`, (req, res) => {
+  const { assessment } = req.body;
   // call the submit function from the server/libs/AssessmentService
 
 });

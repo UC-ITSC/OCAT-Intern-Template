@@ -18,7 +18,7 @@ exports.submit = (assessment) =>
     // use the bookshelf model Assessments from API/src/microservices/Database to fetch
     // the assessment data from the PostgreSQL database
 
-      resolve();
+      resolve(assessments);
     } catch (err) {
       reject(err);
     }
