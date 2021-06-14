@@ -10,7 +10,7 @@ router.post(`/submit`, (req, res) => {
 
 router.get(`/list`, (req, res) => {
   // call the getList function from the server/libs/AssessmentService
-
+  // return assessments to front-end
 });
 
 exports.router = router;

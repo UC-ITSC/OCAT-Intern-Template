@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
 import { AssessmentService } from '../../services/AssessmentService';
 
 export const AssessmentList = () => {
@@ -7,10 +6,10 @@ export const AssessmentList = () => {
 
   // fetch all assessments using the AssessmentService.getList function from OCAT/client/services/AssessmentService.js
   useEffect(() => {
-    fetchAssessments(async () => {
+    const fetchAssessments = async () => {
       const assessments = await AssessmentService.getList();
       setAssessments(assessments);
-    });
+    };
     fetchAssessments();
   }, []);
 

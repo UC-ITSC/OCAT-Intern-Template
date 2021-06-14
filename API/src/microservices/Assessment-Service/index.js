@@ -15,8 +15,8 @@ exports.submit = (assessment) =>
 exports.getList = () =>
   new Promise(async (resolve, reject) => {
     try {
-    // use the bookshelf model Assessments from API/src/microservices/Database to fetch
-    // the assessment data from the PostgreSQL database
+      // use the bookshelf model Assessments from API/src/microservices/Database to fetch
+      // the assessment data from the PostgreSQL database
 
       resolve(assessments);
     } catch (err) {

@@ -17,11 +17,12 @@ export class AssessmentService {
 
   static async getList() {
     try {
+
       // Choose the correct method, url, and data to send
       // in a request to the express OCAT/server/routes/Assessment/index.js
-      await axios({});
+      const response = await axios({});
 
-      return;
+      return assessments;
     }
     catch (err) {
       throw new Error(`${err.response.statusText} - ${err.response.data.message}`);
