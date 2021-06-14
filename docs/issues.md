@@ -9,9 +9,11 @@
     - [ ] Create the "assessments" table in the database with the appropriate columns (id, cat_name, cat_date_of_birth, instrument, score, risk_level, created_at, deleted_at)
     - [ ] Insert the assessment data from the Assessment-Service into the database using bookshelf.js and knex.js
 
-## Style Assessment New form with react-bootstrap
+## Implement react-bootstrap
 
-    - [ ] Style Assessment New form with react-bootstrap
+    - [ ] Style as you go by using react-bootstrap components
+        - [ ] Assessment New
+        - [ ] Assessment List
 
 ## View Assessment List
 
