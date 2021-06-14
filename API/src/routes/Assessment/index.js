@@ -26,4 +26,24 @@ module.exports = server => {
       }
     },
   );
+
+  server.get(
+    `${BASE_URL}/list`,
+    async (req, res, next) => {
+      try {
+
+        // verify that your data is making it here to the API by using console.log();
+        // call the AssessmentService.getList function from the API/src/microservices/Assessment/
+
+        ResponseHandler(
+          res,
+          `Fetched assessments`,
+          { assessments },
+          next,
+        );
+      } catch (err) {
+        next(err);
+      }
+    },
+  );
 };

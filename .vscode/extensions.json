@@ -6,6 +6,7 @@
     "visualstudioexptteam.vscodeintellicode",
     "coenraads.bracket-pair-colorizer-2",
     "streetsidesoftware.code-spell-checker",
-    "gruntfuggly.todo-tree"
+    "gruntfuggly.todo-tree",
+    "vsls-contrib.codetour"
   ]
 }
