@@ -11,7 +11,7 @@
 
 ## Implement react-bootstrap
 
-    - [ ] Style as you go by using react-bootstrap components
+    - Style as you go by using react-bootstrap components
         - [ ] Assessment New
         - [ ] Assessment List
 
