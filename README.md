@@ -80,7 +80,9 @@ The application must be created with two "layers" using an API model and pseudo-
 
 ## Navigating the OCAT File Structure
 
-TODO: Talk about code tours here
+We have created some CodeTours for you to help you understand the first couple tasks.
+
+Make sure you have installed the recommended extensions, then see the [Starting CodeTours Documentation](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour#starting-tours) for instructions on viewing our tours
 
 ## Roles
 
