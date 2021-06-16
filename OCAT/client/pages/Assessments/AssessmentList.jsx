@@ -7,8 +7,7 @@ export const AssessmentList = () => {
   // fetch all assessments using the AssessmentService.getList function from OCAT/client/services/AssessmentService.js
   useEffect(() => {
     const fetchAssessments = async () => {
-      const assessments = await AssessmentService.getList();
-      setAssessments(assessments);
+      setAssessments(await AssessmentService.getList());
     };
     fetchAssessments();
   }, []);
