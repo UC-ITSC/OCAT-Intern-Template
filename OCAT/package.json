@@ -12,6 +12,7 @@
   },
   "author": "Paul Wilson",
   "dependencies": {
+    "app-root-path": "^3.0.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "compression": "^1.6.2",
@@ -25,6 +26,8 @@
     "react-dom": "^16.14.0",
     "react-dom-factories": "^1.0.2",
     "react-router-dom": "^5.2.0",
+    "restify-clients": "^3.1.0",
+    "restify-errors": "^8.0.2",
     "serve-favicon": "^2.5.0",
     "string-replace-loader": "^2.2.0"
   },

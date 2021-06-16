@@ -1,4 +1,4 @@
-const config = require(`../../utils/Config`);
+const { config } = require(`../../utils`);
 const pkg = require(`../../../package.json`);
 
 const knex = require(`knex`)({

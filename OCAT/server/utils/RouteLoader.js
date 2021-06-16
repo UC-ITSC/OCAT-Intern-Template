@@ -1,10 +1,11 @@
 const fs = require(`fs`);
 const path = require(`path`);
+const appRoot = require(`app-root-path`);
 
 const getDirectories = (srcpath) =>
   fs.readdirSync(srcpath)
     .filter((file) => fs.statSync(path.join(srcpath, file)).isDirectory());
-const DEFAULT_ROUTES_DIR = `${__dirname}/../../routes`;
+const DEFAULT_ROUTES_DIR = `${appRoot}/server/routes`;
 
 module.exports = (app, routeDirectoryPath = DEFAULT_ROUTES_DIR) => new Promise((resolve, reject) => {
   if (!app) {
@@ -19,11 +20,11 @@ module.exports = (app, routeDirectoryPath = DEFAULT_ROUTES_DIR) => new Promise((
 
   routeDirectories.forEach(route => {
     const routerPath = path.resolve(`${routeDirectoryPath}/${route}`);
-      const router = require(routerPath); // eslint-disable-line
+    const router = require(routerPath);
 
     const params = [ router.path ];
 
-      params.push(router.router); // eslint-disable-line
+    params.push(router.router);
 
     app.use.apply(app, params);
   });

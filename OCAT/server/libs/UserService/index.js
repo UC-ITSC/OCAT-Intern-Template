@@ -1,2 +1,1 @@
-const request = require(`request`);
-const config = require(`../Config`);
+const { client, config } = require(`../../utils`);

@@ -1,5 +1,5 @@
 const { ResponseHandler } = require(`../../utils`);
-const { IdentityService } = require(`../../microservices`);
+const { UserService } = require(`../../microservices`);
 
 const BASE_URL = `/user`;
 

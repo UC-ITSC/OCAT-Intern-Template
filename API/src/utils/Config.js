@@ -1,6 +1,7 @@
 const fs = require(`fs`);
+const appRoot = require(`app-root-path`);
 
-const CONFIG_FILE_PATH = `${__dirname}/../../../config.json`;
+const CONFIG_FILE_PATH = `${appRoot}/config.json`;
 let config = {};
 let server = {};
 

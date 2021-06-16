@@ -1,7 +1,8 @@
 const fs = require(`fs`);
+const appRoot = require(`app-root-path`);
 
 try {
-  const configFile = fs.readFileSync(`${__dirname}/../../../config.json`, `utf8`);
+  const configFile = fs.readFileSync(`${appRoot}/config.json`, `utf8`);
 
   const config = JSON.parse(configFile);
 

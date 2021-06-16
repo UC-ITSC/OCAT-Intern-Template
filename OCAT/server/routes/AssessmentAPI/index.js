@@ -1,16 +1,22 @@
 const router = require(`express`).Router();
 const { AssessmentService } = require(`../../libs`);
-const { ErrorHandler } = require(`../../utils`);
 
-router.post(`/submit`, (req, res) => {
-  const { assessment } = req.body;
-  // call the submit function from the server/libs/AssessmentService
-
+router.post(`/submit`, (req, res, next) => {
+  try {
+    const { assessment } = req.body;
+    // call the submit function from the server/libs/AssessmentService
+  } catch (error) {
+    next(error);
+  }
 });
 
-router.get(`/list`, (req, res) => {
-  // call the getList function from the server/libs/AssessmentService
-  // return assessments to front-end
+router.get(`/list`, (req, res, next) => {
+  try {
+    // call the getList function from the server/libs/AssessmentService
+    // return assessments to front-end
+  } catch (error) {
+    next(error);
+  }
 });
 
 exports.router = router;

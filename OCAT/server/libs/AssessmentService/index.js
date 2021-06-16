@@ -1,36 +1,36 @@
-const request = require(`request`);
-const config = require(`../Config`);
+const { client, config } = require(`../../utils`);
+const { InternalServerError } = require(`restify-errors`);
 
 exports.submit = (assessment) => new Promise((resolve, reject) => {
-
-  // supply the correct uri and method here
-  const options = {
-  };
-
   // this function sends a request to the API
   // finish the logic to handle the response when returned from the API
-  request(options, (error, response) => {
-    if (error) {
-      reject(error);
-    }
+  client.METHOD(`/some-url`,
+    (err, req, res, body) => {
+      if (err) {
+        return reject(err);
+      }
 
-    resolve();
-  });
+      if (res.statusCode !== 200) {
+        return reject(new InternalServerError(`Request Error`));
+      }
+
+      resolve(body.data);
+    });
 });
 
 exports.getList = () => new Promise((resolve, reject) => {
-
-  // supply the correct uri and method here
-  const options = {
-  };
-
   // this function sends a request to the API
   // finish the logic to handle the response when returned from the API
-  request(options, (error, response) => {
-    if (error) {
-      reject(error);
-    }
+  client.METHOD(`/some-url`,
+    (err, req, res, body) => {
+      if (err) {
+        return reject(err);
+      }
 
-    resolve(assessments);
-  });
+      if (res.statusCode !== 200) {
+        return reject(new InternalServerError(`Request Error`));
+      }
+
+      resolve(body.data);
+    });
 });

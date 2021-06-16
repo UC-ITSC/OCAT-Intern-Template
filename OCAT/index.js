@@ -1,9 +1,8 @@
-const { config } = require(`./server/libs`);
 const express = require(`express`);
 const app = express();
 const server = require(`http`).Server(app);
 
-const { IndexRoute, RouteLoader } = require(`./server/utils`);
+const { ErrorHandler, IndexRoute, RouteLoader, config } = require(`./server/utils`);
 
 const favicon = require(`serve-favicon`);
 const compression = require(`compression`);
@@ -25,6 +24,7 @@ app.use(`/public`, (req, res) => {
 RouteLoader(app)
   .then(() => {
     app.all(`/*`, IndexRoute);
+    app.use(ErrorHandler);
 
     // eslint-disable-next-line no-console
     server.listen(config.server.port, console.log(`Listening on port: ${config.server.port}!`));

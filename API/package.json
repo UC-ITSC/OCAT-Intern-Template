@@ -11,6 +11,7 @@
   "author": "Paul Wilson",
   "license": "UNLICENSED",
   "dependencies": {
+    "app-root-path": "^3.0.0",
     "bookshelf": "^1.2.0",
     "bookshelf-soft-delete": "^5.0.0",
     "bookshelf-virtuals-plugin": "^1.0.0",
