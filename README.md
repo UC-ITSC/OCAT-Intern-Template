@@ -129,7 +129,7 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
         1. Terminal 1
             - npm run dev
         2. Terminal 2
-            - npm run webpack:dev
+            - npm run build:dev
 
 ### C. Features
 
@@ -177,7 +177,6 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
   - Video: [Make a React Website with Bootstrap - Beginners](https://www.youtube.com/watch?v=RcfvUWJqHOs)
 
 - Express
-  - [Express Application Generator](http://expressjs.com/en/starter/generator.html)
   - [Express API Reference](http://expressjs.com/en/4x/api.html)
   - Video: [Learn Express & Node.js in 15 Minutes](https://www.youtube.com/watch?v=JlgKybraoy4)
 
