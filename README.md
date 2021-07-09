@@ -63,7 +63,7 @@
 - Package Manager (for Node.js)
   - [npm](https://www.npmjs.com/)
 - Task Runners
-  - [webpack](https://webpack.js.org/) and/or [gulp](https://gulpjs.com/)
+  - [webpack](https://webpack.js.org/)
 
 ## Architecture
 
