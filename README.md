@@ -161,59 +161,69 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
 
 ## Resources
 
-- React
-  - [Intro to React](https://reactjs.org/tutorial/tutorial.html)
-  - [Main Concepts](https://reactjs.org/docs/hello-world.html)
-  - Video: [React Tutorial for Beginners](https://www.youtube.com/watch?v=dGcsHMXbSOA)
+### React
 
-- React Routing
-  - [React Router](https://www.reactrouter.com)
-  - [react-router-dom's npm page](https://www.npmjs.com/package/react-router-dom)
-  - Video: [React Router Tutorial](https://www.youtube.com/watch?v=Law7wfdg_ls)
+- [Intro to React](https://reactjs.org/tutorial/tutorial.html)
+- [Main Concepts](https://reactjs.org/docs/hello-world.html)
+- Video: [React Tutorial for Beginners](https://www.youtube.com/watch?v=dGcsHMXbSOA)
 
-- Bootstrap
-  - [Bootstrap Documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
-  - [Bootstrap Templates](https://github.com/therebelrobot/awesome-bootstrap#templates)
-  - Video: [Make a React Website with Bootstrap - Beginners](https://www.youtube.com/watch?v=RcfvUWJqHOs)
+### React Routing
 
-- Express
-  - [Express API Reference](http://expressjs.com/en/4x/api.html)
-  - Video: [Learn Express & Node.js in 15 Minutes](https://www.youtube.com/watch?v=JlgKybraoy4)
+- [React Router](https://www.reactrouter.com)
+- [react-router-dom's npm page](https://www.npmjs.com/package/react-router-dom)
+- Video: [React Router Tutorial](https://www.youtube.com/watch?v=Law7wfdg_ls)
 
-- Bookshelf.js
-  - [API Reference](https://bookshelfjs.org/api.html)
-  - [Bookshelf.js: A Node.js ORM](http://stackabuse.com/bookshelf-js-a-node-js-orm/)
-  - [Helpful Example](https://travishorn.com/what-did-i-learn-this-week-knex-js-bookshelf-js-95d3490e3a6f)
-  - [More Examples](http://zetcode.com/javascript/bookshelf/)
-  - [bookshelf's npm page](https://www.npmjs.com/package/bookshelf)
-  - Video: [Bookshelf.js Tutorial - An Introduction to Bookshelf.js](https://www.youtube.com/watch?v=WyRoEQjtDDY)
+### Bootstrap
 
-- React.js HTTP Requests with Axios
-  - [Using Axios with React](https://www.digitalocean.com/community/tutorials/react-axios-react)
-  - [Axios' npm page](https://www.npmjs.com/package/axios)
-  - Video: [How to use Axios with React](https://www.youtube.com/watch?v=oQnojIyTXb8)
+- [Bootstrap Documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [Bootstrap Templates](https://github.com/therebelrobot/awesome-bootstrap#templates)
+- Video: [Make a React Website with Bootstrap - Beginners](https://www.youtube.com/watch?v=RcfvUWJqHOs)
 
-- React Hook Form
-  - [Main Page](https://react-hook-form.com/)
-  - [Examples](https://github.com/react-hook-form/react-hook-form/tree/master/examples)
-  - [react-hook-form's npm page](https://www.npmjs.com/package/react-hook-form)
-  - Video: [React Hook Form Tutorial](https://www.youtube.com/watch?v=bU_eq8qyjic)
+### Express
 
-- React Table
-  - [Main Page](https://react-table.tanstack.com/)
-  - [How to Use React Table](https://codehandbook.org/how-to-use-react-table-in-react-web-app/)
-  - [react-table's npm page](https://www.npmjs.com/package/react-table)
+- [Express API Reference](http://expressjs.com/en/4x/api.html)
+- Video: [Learn Express & Node.js in 15 Minutes](https://www.youtube.com/watch?v=JlgKybraoy4)
 
-- Bcrypt
-  - [Hashing Passwords with Node.js and Bcrypt](https://www.abeautifulsite.net/hashing-passwords-with-nodejs-and-bcrypt)
-  - [User Authentication using Bcrypt](https://medium.com/@holtkam2/add-user-authentication-to-your-node-expressjs-application-using-bcrypt-81bb0f618ab3)
-  - [bcrypt's npm page](https://www.npmjs.com/package/bcrypt)
+### Bookshelf.js
 
-- PostgreSQL
-  - [Documentation](https://www.postgresql.org/)
-  - Access the Database
-    - Windows developers should use -> [pgAdmin](https://www.pgadmin.org/download/)
-    - Mac developers should use -> [postico](https://eggerapps.at/postico/)
+- [API Reference](https://bookshelfjs.org/api.html)
+- [Bookshelf.js: A Node.js ORM](http://stackabuse.com/bookshelf-js-a-node-js-orm/)
+- [Helpful Example](https://travishorn.com/what-did-i-learn-this-week-knex-js-bookshelf-js-95d3490e3a6f)
+- [More Examples](http://zetcode.com/javascript/bookshelf/)
+- [bookshelf's npm page](https://www.npmjs.com/package/bookshelf)
+- Video: [Bookshelf.js Tutorial - An Introduction to Bookshelf.js](https://www.youtube.com/watch?v=WyRoEQjtDDY)
+
+### React.js HTTP Requests with Axios
+
+- [Using Axios with React](https://www.digitalocean.com/community/tutorials/react-axios-react)
+- [Axios' npm page](https://www.npmjs.com/package/axios)
+- Video: [How to use Axios with React](https://www.youtube.com/watch?v=oQnojIyTXb8)
+
+### React Hook Form
+
+- [Main Page](https://react-hook-form.com/)
+- [Examples](https://github.com/react-hook-form/react-hook-form/tree/master/examples)
+- [react-hook-form's npm page](https://www.npmjs.com/package/react-hook-form)
+- Video: [React Hook Form Tutorial](https://www.youtube.com/watch?v=bU_eq8qyjic)
+
+### React Table
+
+- [Main Page](https://react-table.tanstack.com/)
+- [How to Use React Table](https://codehandbook.org/how-to-use-react-table-in-react-web-app/)
+- [react-table's npm page](https://www.npmjs.com/package/react-table)
+
+### Bcrypt
+
+- [Hashing Passwords with Node.js and Bcrypt](https://www.abeautifulsite.net/hashing-passwords-with-nodejs-and-bcrypt)
+- [User Authentication using Bcrypt](https://medium.com/@holtkam2/add-user-authentication-to-your-node-expressjs-application-using-bcrypt-81bb0f618ab3)
+- [bcrypt's npm page](https://www.npmjs.com/package/bcrypt)
+
+### PostgreSQL
+
+- [Documentation](https://www.postgresql.org/)
+- Access the Database
+  - Windows developers should use -> [pgAdmin](https://www.pgadmin.org/download/)
+  - Mac developers should use -> [postico](https://eggerapps.at/postico/)
 
 ## Advanced Resources
 
