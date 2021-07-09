@@ -7,37 +7,43 @@
     - Open a terminal and run this command:
 
        ```bash
-       docker run -p 5432:5432 --name postgres -e PGDATA=/var/lib/postgresql/data/pgdata -v pg:/var/lib/postgresql/data -e POSTGRES_PASSWORD=password -d postgres
+       docker run -p 5432:5432 --name postgres -e PGDATA=/var/lib/postgresql/data/pgdata -v pg:/var/lib/postgresql/data -e POSTGRES_PASSWORD=postgres -d postgres
        ```
 
     - Next run this command:
 
        ```bash
-       docker run --rm -it -v pg:/pg alpine sed -i 's/host all all all md5/host all all all trust/' /pg/pgdata/pg_hba.conf && docker restart postgres
+       docker run --rm -it -v pg:/pg alpine sed -i "s/host all all all md5/host all all all trust/" /pg/pgdata/pg_hba.conf && docker restart postgres
+       ```
+
+    - Next run this command:
+
+       ```bash
+       docker exec -it postgres createdb ocat -U postgres
        ```
 
     - And finally this command:
 
        ```bash
-       docker exec -it postgres createdb ocat -U postgres && cat schema.sql | docker exec -i postgres psql -U postgres -d ocat
-       ```
-
-    - Next run this command:
-
-       ```bash
-       docker run --rm -it -v pg:/pg alpine sed -i 's/host all all all md5/host all all all trust/' /pg/pgdata/pg_hba.conf && docker restart postgres
+       cat schema.sql | docker exec -i postgres psql -U postgres -d ocat
        ```
 
   - Steps for Mac:
     - Download [Docker Desktop](https://www.docker.com/products/docker-desktop)
     - Open a terminal and run this command:
 
-      ```bash
-       docker run -p 5432:5432 --name postgres -e PGDATA=/var/lib/postgresql/data/pgdata -v pg:/var/lib/postgresql/data -e POSTGRES_PASSWORD=password -d postgres
+       ```bash
+       docker run -p 5432:5432 --name postgres -e PGDATA=/var/lib/postgresql/data/pgdata -v pg:/var/lib/postgresql/data -e POSTGRES_PASSWORD=postgres -d postgres
        ```
 
     - Next run this command:
 
        ```bash
-       docker exec -it postgres createdb ocat -U postgres && cat schema.sql | docker exec -i postgres psql -U postgres -d ocat
+       docker exec -it postgres createdb ocat -U postgres
+       ```
+
+    - And finally this command:
+
+       ```bash
+       cat schema.sql | docker exec -i postgres psql -U postgres -d ocat
        ```
