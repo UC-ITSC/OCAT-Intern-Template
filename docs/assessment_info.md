@@ -2,7 +2,12 @@
 
 ## Instrument
 
-- Cat Behavioral Instrument
+- Cat Behavioral Instrument (static text)
+
+## Cat Details
+
+- Cat Name (text)
+- Cat Date of Birth (date)
 
 ## Questions & Responses
 
