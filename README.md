@@ -132,7 +132,7 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
 5. Verify that all recommended extensions are installed
     - [dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
     - [formulahendry.auto-rename-tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
-    - [mgmcdermott.vscode-language-babel]https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel)
+    - [mgmcdermott.vscode-language-babel](https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel)
     - [visualstudioexptteam.vscodeintellicode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
     - [coenraads.bracket-pair-colorizer-2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
     - [streetsidesoftware.code-spell-checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
@@ -140,7 +140,7 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
     - [vsls-contrib.codetour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour)
     - [herrmannplatz.npm-dependency-links](https://marketplace.visualstudio.com/items?itemName=herrmannplatz.npm-dependency-links)
     - [christian-kohler.path-intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
-6. Start the "Task 1" CodeTour: https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour#starting-tours
+6. Start the "Task 1" CodeTour: [Starting Tours](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour#starting-tours)
 7. Happy Coding!
 
 ### C. Features
