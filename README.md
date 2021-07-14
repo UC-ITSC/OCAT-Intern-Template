@@ -140,8 +140,9 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
     - [vsls-contrib.codetour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour)
     - [herrmannplatz.npm-dependency-links](https://marketplace.visualstudio.com/items?itemName=herrmannplatz.npm-dependency-links)
     - [christian-kohler.path-intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
-6. Start the "Task 1" CodeTour: [Starting Tours](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour#starting-tours)
-7. Happy Coding!
+6. Start the "Task 1" CodeTour
+    - [Starting Tours](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour#starting-tours)
+8. Happy Coding!
 
 ### C. Features
 
