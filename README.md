@@ -125,9 +125,10 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
     - npm install
         - [npm install](https://docs.npmjs.com/cli/install#:~:text=npm%20install%20(in%20package%20directory,directory)%20as%20a%20global%20package.)
     - Open a second terminal window
-        1. Terminal 1
+        1. Verify that both terminals are in the OCAT/ directory
+        2. Terminal 1
             - npm run dev
-        2. Terminal 2
+        3. Terminal 2
             - npm run build:dev
 5. Verify that all recommended extensions are installed
     - [dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
