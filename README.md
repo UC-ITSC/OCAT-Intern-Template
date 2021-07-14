@@ -112,7 +112,7 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
         - [Creating an Issue](https://docs.github.com/en/github/managing-your-work-on-github/creating-an-issue)
         - [Adding Issues to a Project Board](https://docs.github.com/en/github/managing-your-work-on-github/adding-issues-and-pull-requests-to-a-project-board#adding-issues-and-pull-requests-to-a-project-board-from-the-sidebar)
 
-### B. Get the Application Running
+### B. Setup Development Environment
 
 1. Clone your new repository
     - [Cloning a Repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
@@ -124,12 +124,24 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
         - Begins as config.example.json and needs to be modified to match your environment
     - npm install
         - [npm install](https://docs.npmjs.com/cli/install#:~:text=npm%20install%20(in%20package%20directory,directory)%20as%20a%20global%20package.)
-    - npm run build
     - Open a second terminal window
         1. Terminal 1
             - npm run dev
         2. Terminal 2
             - npm run build:dev
+5. Verify that all recommended extensions are installed
+  - [dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+  - [formulahendry.auto-rename-tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+  - [mgmcdermott.vscode-language-babel]https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel)
+  - [visualstudioexptteam.vscodeintellicode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
+  - [coenraads.bracket-pair-colorizer-2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
+  - [streetsidesoftware.code-spell-checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+  - [gruntfuggly.todo-tree"](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
+  - [vsls-contrib.codetour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour)
+  - [herrmannplatz.npm-dependency-links](https://marketplace.visualstudio.com/items?itemName=herrmannplatz.npm-dependency-links)
+  - [christian-kohler.path-intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+6. Start the "Task 1" CodeTour: https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour#starting-tours
+7. Happy Coding!
 
 ### C. Features
 
