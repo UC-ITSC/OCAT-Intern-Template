@@ -143,7 +143,7 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
     - [christian-kohler.path-intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
 6. Start the "Task 1" CodeTour
     - [Starting Tours](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour#starting-tours)
-8. Happy Coding!
+7. Happy Coding!
 
 ### C. Features
 
