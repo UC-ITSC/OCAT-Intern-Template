@@ -6,8 +6,8 @@ try {
 
   const config = JSON.parse(fs.readFileSync(CONFIG_FILE_PATH, `utf8`));
 
-  module.exports = config
-} catch {
+  module.exports = config;
+} catch (err) {
   module.exports = {
     database: {
       dialect: process.env.DATABASE_DIALECT || `pg`,
@@ -19,7 +19,7 @@ try {
       username: process.env.DATABASE_USERNAME || `postgres`,
     },
     server: {
-      port: server.port || 3000,
+      port: process.env.SERVER_PORT || 3000,
     },
   };
 }
