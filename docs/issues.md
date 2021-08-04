@@ -25,7 +25,7 @@
 
 ## Supervisor Login
 
-    - [ ] Modify login.ejs to create a login form for the front-end
+    - [ ] Create a login page and login form in the client folder
     - [ ] Allow users to submit login data (username, password)
     - [ ] Send the login data from the front-end to the API
     - [ ] Send the login data from the API to the User-Service

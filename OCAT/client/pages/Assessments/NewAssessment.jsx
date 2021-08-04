@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import { AssessmentService } from '../../services/AssessmentService';
 
 export const NewAssessment = () => {
@@ -10,7 +10,7 @@ export const NewAssessment = () => {
     await AssessmentService.submit(data);
   };
 
-  return <form>
+  return <Form>
     <Button variant="primary" type="submit">Submit</Button>
-  </form>;
+  </Form>;
 };

@@ -117,7 +117,7 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
 1. Clone your new repository
     - [Cloning a Repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 2. [Install NodeJS 12.x](docs/install_nodejs.md) on your computer (__Do NOT install Node 14 or the project will not run__)
-3. [Install PostgreSQL](docs/install_postgres.md)
+3. [Install PostgreSQL](docs/install_postgres.md) using the [instructions in our docs](docs/install_postgres.md)
 4. OCAT
     - Navigate into the OCAT/ directory ``cd OCAT/``
     - Verify that the config.json for both directories is correct
@@ -147,6 +147,7 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
 
 ### C. Features
 
+- NOTE: These are the general requirements for features 1, 2 and 3. For specific instructions, see the code tours.
 - NOTE: Please do any login-related pieces near the end.  Otherwise, you may spend the entire time developing a login process and you will not have much to show come presentation time.
 - NOTE: All work should be done on a separate "branch" so that it can be code reviewed.  Below are instructions on how to create a new branch:
   - [Creating a branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-branches#creating-a-branch)
