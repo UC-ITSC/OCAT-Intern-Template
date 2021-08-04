@@ -152,8 +152,10 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
   - [Creating a branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-branches#creating-a-branch)
 
 1. Allow Users to submit an assessment with the following information
-    - NOTE: An "assessment" has a type, five questions, and two responses per question -> Use the example info here: [OCAT Assessment Info](./docs/assessment_info.md)
-        - Instrument Name (static text field) - this is the type of assessment that is currently being conducted -> Example: Cat Behavioral Instrument
+    - NOTE: An "assessment" has a type, five questions, and two responses per question ->
+    - Use the example info here: [OCAT Assessment Info](./docs/assessment_info.md)
+        - Instrument Name (static text field)
+          - this is the type of assessment that is currently being conducted -> Example: Cat Behavioral Instrument
         - Cat Name (text) -> Example: Mr. Fluffykins
         - Cat Date of Birth (date)
         - Score (integer calculated by the sum of all responses)
