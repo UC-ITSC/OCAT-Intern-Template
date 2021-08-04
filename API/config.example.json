@@ -5,8 +5,8 @@
   "database": {
     "host": "localhost",
     "port": 5432,
-    "username": "",
-    "password": "",
+    "username": "postgres",
+    "password": "postgres",
     "name": "ocat",
     "dialect": "pg",
     "minconnections": 2
