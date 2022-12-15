@@ -8,8 +8,8 @@
     "javascriptreact"
   ],
   "eslint.workingDirectories": [
-    "./API",
-    "./OCAT"
+    "./packages/api",
+    "./packages/client"
   ],
   "cSpell.words": [
     "Fluffykins",

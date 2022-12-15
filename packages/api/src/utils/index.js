@@ -1,11 +1,11 @@
+const BooleanParser = require(`./BooleanParser`);
 const ErrorHandler = require(`./ErrorHandler`);
 const ResponseHandler = require(`./ResponseHandler`);
-const RouteLoader = require(`./RouteLoader`);
 const Password = require(`./Password`);
 
 module.exports = {
+  BooleanParser,
   ErrorHandler,
   Password,
   ResponseHandler,
-  RouteLoader,
 };

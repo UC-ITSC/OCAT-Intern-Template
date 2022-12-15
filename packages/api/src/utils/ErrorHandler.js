@@ -1,21 +1,12 @@
-class ErrorHandler {
-  constructor(server) {
-    // Documentation: http://restify.com/docs/server-api/#errors
-    server.on(`Forbidden`, this.forbiddenErrorHandler);
-    server.on(`restifyError`, this.defaultErrorHandler);
+const ErrorHandler = (err, req, res, next) => {
+  if (res.headersSent) {
+    return next(err);
   }
 
-  defaultErrorHandler(req, res, err, next) {
-    if (err.message.includes(`Forbidden`)) { return next(); }
-    console.log(`${req.id} - ${err.status} - ${err.message} - ${req.url} - ${req.method}`); // eslint-disable-line no-console
+  // eslint-disable-next-line no-console
+  console.error(`${req.method} ${req.url}`, err);
 
-    return next();
-  }
+  res.status(err.statusCode || 500).json({ message: err.message, status: err.statusCode });
+};
 
-  forbiddenErrorHandler(req, res, err, next) {
-    console.log(`${req.id} - ${err.status || 403} - ${err} - ${req.url} - ${req.method}`); // eslint-disable-line no-console
-
-    return next();
-  }
-}
 module.exports = ErrorHandler;

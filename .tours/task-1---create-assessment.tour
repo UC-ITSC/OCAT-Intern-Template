@@ -29,7 +29,7 @@
       "line": 7
     },
     {
-      "file": "packages/api/src/routes/Assessment/index.js",
+      "file": "packages/api/src/routes/assessment.js",
       "description": "# API Router - /assessment/submit\n\nReceive the POST request from the front-end server and call the `.submit()` function in [packages/api/src/microservices/Assessment-Service/index.js](./packages/api/src/microservices/Assessment-Service/index.js).  Pass in the assessment data from the request parameters.",
       "line": 13
     },
