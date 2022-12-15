@@ -18,14 +18,15 @@
       "line": 6
     },
     {
-      "file": "packages/api/config.example.json",
-      "description": "# config.json\n\n1. Setup your PostgreSQL instance in a Docker container using the step-by-step instructions provided in [docs/install_postgres.md](https://github.com/UC-ITSC/OCAT-Intern-Template/blob/master/docs/install_postgres.md)\n2. Duplicate this file using copy + paste\n3. Rename this file to config.json\n4. Supply the correct values to match your PostgreSQL instance",
-      "line": 1
+      "file": "packages/api/config/default.json",
+      "description": "# Config\n\n1. Setup your PostgreSQL instance in a Docker container using the step-by-step instructions provided in [docs/install_postgres.md](https://github.com/UC-ITSC/OCAT-Intern-Template/blob/master/docs/install_postgres.md)\n2. Duplicate this file using copy + paste\n3. Rename this file to local.json\n4. Supply the correct values to match your PostgreSQL instance\n5. Remove any values that you don't change from the default.json",
+      "line": 1,
+      "title": "Config"
     },
     {
-      "file": "packages/api/config.example.json",
-      "description": "# Start Application\n\n1. Open a third terminal window by using the split functionality\n2. Navigate into the API directory (folder) with the command `cd ../packages/api/`\n3. `npm install`\n4. `npm run dev`",
-      "line": 14
+      "file": "packages/api/package.json",
+      "description": "# Start Application\n\n1. Open a second terminal window by using the split functionality\n2. Navigate into the API directory (folder) with the command `cd ../packages/api/`\n3. `npm install`\n4. `npm run dev`",
+      "line": 7
     },
     {
       "file": "packages/api/src/routes/Assessment/index.js",
