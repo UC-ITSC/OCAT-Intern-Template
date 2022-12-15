@@ -3,60 +3,44 @@
   "title": "Task 1 - Create Assessment",
   "steps": [
     {
-      "file": "OCAT/config.example.json",
-      "description": "# config.json\n\n1. Duplicate this file by using copy + paste\n2. Rename it to config.json\n3. Modify the contents of the file to fit your environment (you should only need to supply YOUR_NAME in the \"name\" attribute)",
-      "line": 1
+      "file": "packages/client/package.json",
+      "description": "# Start Application\n\nREMINDER: In order to run the application, you will have to run some commands.\n_______________________________________________\n\nCOMMANDS:\n\nOpen a terminal within vscode and type these commands into that terminal and hit \"enter\" or \"return\":\n\n- Navigate into the OCAT directory (folder) with the command \"`cd packages/client/`\"\n- `npm install`\n- `npm start`\n- Open the browser and go to http://localhost:3000 to verify that your application is running",
+      "line": 6
     },
     {
-      "file": "OCAT/package.json",
-      "description": "# Start Application\n\nREMINDER: In order to run the application, you will have to run some commands.\n_______________________________________________\n\nCOMMANDS:\n\nOpen a terminal within vscode and type these commands into that terminal and hit \"enter\" or \"return\":\n\n- Navigate into the OCAT directory (folder) with the command \"`cd OCAT/`\"\n- `npm install`\n- split your vscode terminal window into two\n  - Terminal 1\n    - `npm run dev`\n  - Terminal 2\n    - `npm run build:dev`\n- Open the browser and go to http://localhost:8000 to verify that your application is running",
-      "line": 12
-    },
-    {
-      "file": "OCAT/client/pages/Assessments/NewAssessment.jsx",
+      "file": "packages/client/src/pages/Assessments/NewAssessment.jsx",
       "description": "# Create Form\n\nUse the provided Assessment Info in [docs/assessment_info.md](https://github.com/UC-ITSC/OCAT-Intern-Template/blob/master/docs/assessment_info.md) to create an assessment form for the front-end using the library \"`react-hook-form`\"\n\nInstall and implement \"`react-hook-form`\" by following the [documented instructions](https://www.npmjs.com/package/react-hook-form)\n",
       "line": 6
     },
     {
-      "file": "OCAT/client/services/AssessmentService.js",
-      "description": "# Axios Service Request\n\nInside the `AssessmentService.submit()` function, send a POST request to `/api/assessment/submit` using the axios library that contains the assessment data from the front-end form.\n\nThis will go to the back-end Express server in the file [OCAT/server/routes/AssessmentAPI/index.js](./OCAT/server/routes/AssessmentAPI/index.js)",
+      "file": "packages/client/src/services/AssessmentService.js",
+      "description": "# Axios Service Request\n\nInside the `AssessmentService.submit()` function, send a POST request to `/api/assessment/submit` using the axios library that contains the assessment data from the front-end form.\n\nThis will go to the back-end Express server in the file [packages/api/src/routes/Assessment/index.js](./packages/api/src/routes/Assessment/index.js)",
       "line": 6
     },
     {
-      "file": "OCAT/server/routes/AssessmentAPI/index.js",
-      "description": "# Express Router - /api/assessment/submit\n\nReceive the front-end axios request and call the `.submit()` function from the AssessmentService in [OCAT/client/services/AssessmentService.js](./OCAT/client/services/AssessmentService.js). Pass in the assessment data from the request body.",
-      "line": 7
-    },
-    {
-      "file": "OCAT/server/libs/AssessmentService/index.js",
-      "description": "# API Request\n\nSend a POST request containing the assessment data passed down from the front-end form.  This request will be sent to `/assessment/submit` in [API/src/routes/Assessment/index.js](./API/src/routes/Assessment/index.js)",
-      "line": 5
-    },
-    {
-      "file": "API/config.example.json",
+      "file": "packages/api/config.example.json",
       "description": "# config.json\n\n1. Setup your PostgreSQL instance in a Docker container using the step-by-step instructions provided in [docs/install_postgres.md](https://github.com/UC-ITSC/OCAT-Intern-Template/blob/master/docs/install_postgres.md)\n2. Duplicate this file using copy + paste\n3. Rename this file to config.json\n4. Supply the correct values to match your PostgreSQL instance",
       "line": 1
     },
     {
-      "file": "API/config.example.json",
-      "description": "# Start Application\n\n1. Open a third terminal window by using the split functionality\n2. Navigate into the API directory (folder) with the command `cd ../API/`\n3. `npm install`\n4. `npm run dev`",
+      "file": "packages/api/config.example.json",
+      "description": "# Start Application\n\n1. Open a third terminal window by using the split functionality\n2. Navigate into the API directory (folder) with the command `cd ../packages/api/`\n3. `npm install`\n4. `npm run dev`",
       "line": 14
     },
     {
-      "file": "API/src/routes/Assessment/index.js",
-      "description": "# API Router - /assessment/submit\n\nReceive the POST request from the front-end server and call the `.submit()` function in [API/src/microservices/Assessment-Service/index.js](./API/src/microservices/Assessment-Service/index.js).  Pass in the assessment data from the request parameters.",
+      "file": "packages/api/src/routes/Assessment/index.js",
+      "description": "# API Router - /assessment/submit\n\nReceive the POST request from the front-end server and call the `.submit()` function in [packages/api/src/microservices/Assessment-Service/index.js](./packages/api/src/microservices/Assessment-Service/index.js).  Pass in the assessment data from the request parameters.",
       "line": 13
     },
     {
-      "file": "API/src/microservices/Assessment-Service/index.js",
+      "file": "packages/api/src/microservices/Assessment-Service/index.js",
       "description": "# Assessment Microservice\n\nThis step will introduce an ORM (Object-Relational Mapping) tool we use for this project called \"`Bookshelf.js`\" that works in tandem with \"`knex.js`\"\nUse Bookshelf to save the assessment data from the front-end form into the PostgreSQL database.\n\nHINT: use Bookshelf's `.save()` function: https://bookshelfjs.org/api.html#Model-instance-save\n",
       "line": 8
     },
     {
-      "file": "API/src/microservices/Assessment-Service/index.js",
+      "file": "packages/api/src/microservices/Assessment-Service/index.js",
       "description": "# Finish Issue\n\n1. Test manually in the browser to make sure your form is working and submitting properly\n2. [Create a new branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/managing-branches#creating-a-branch)\n3. [Create a pull request into the \"master\" branch](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)\n4. [Get someone to review your pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)\n5. Once happy with your changes, [merge your pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request)\n6. Go to the next issue",
       "line": 13
     }
-  ],
-  "ref": "master"
+  ]
 }

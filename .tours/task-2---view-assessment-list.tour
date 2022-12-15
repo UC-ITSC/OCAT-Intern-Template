@@ -67,6 +67,5 @@
       "description": "# Finish Issue\n\n1. Test manually to make sure your table is working properly\n2. [Create a new branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/managing-branches#creating-a-branch)\n3. [Create a pull request into the \"master\" branch](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)\n4. [Get someone to review your pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)\n5. Once happy with your changes, [merge your pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request)\n6. Go to the next issue",
       "line": 21
     }
-  ],
-  "ref": "master"
+  ]
 }
