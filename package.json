@@ -1,0 +1,12 @@
+{
+  "name": "ocat-template",
+  "private": true,
+  "scripts": {
+    "check-updates": "ncu --configFileName .check-updates.json",
+    "check-updates:fix": "ncu --configFileName .check-updates.json --upgrade --errorLevel 1",
+    "check-updates:all": "ncu --configFileName .check-updates.json --target latest --errorLevel 1"
+  },
+  "devDependencies": {
+    "npm-check-updates": "^16.5.1"
+  }
+}
