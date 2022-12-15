@@ -2,7 +2,7 @@
 
 node_modules
 
-public/*
+public
 !public/img
 
 config.json
