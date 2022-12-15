@@ -233,7 +233,7 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
 
 - [Hashing Passwords with Node.js and Bcrypt](https://www.abeautifulsite.net/hashing-passwords-with-nodejs-and-bcrypt)
 - [User Authentication using Bcrypt](https://medium.com/@holtkam2/add-user-authentication-to-your-node-expressjs-application-using-bcrypt-81bb0f618ab3)
-- [bcrypt's npm page](https://www.npmjs.com/package/bcrypt)
+- [bcrypt npm page](https://www.npmjs.com/package/bcrypt)
 
 ### PostgreSQL
 
