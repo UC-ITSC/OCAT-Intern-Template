@@ -5,11 +5,7 @@
     "plugin:jsx-a11y/recommended",
     "plugin:react-hooks/recommended"
   ],
-  "parser": "@babel/eslint-parser",
-  "parserOptions": {
-    "babelOptions": { "configFile": "./.babelrc" }
-  },
-  "plugins": [ "import", "sort-destructure-keys", "jsx-a11y", "react-hooks", "react" ],
+  "plugins": [ "import", "sort-destructure-keys", "jsx-a11y", "react-hooks", "react", "import-quotes" ],
   "env": {
     "browser": true,
     "es2017": true,
@@ -46,7 +42,9 @@
       "function", "Function"
     ],
     "import/order": 2,
+    "import-quotes/import-quotes": [ 2, "single" ],
     "indent": [ 2, 2, { "SwitchCase": 1 } ],
+    "jsx-quotes": [ 2, "prefer-double" ],
     "key-spacing": 2,
     "keyword-spacing": 2,
     "lines-between-class-members": [ 2, "always", { "exceptAfterSingleLine": true } ],
@@ -58,7 +56,7 @@
     "new-parens": 2,
     "no-array-constructor": 2,
     "no-caller": 2,
-    "no-console": 2,
+    "no-console": 1,
     "no-div-regex": 2,
     "no-else-return": 2,
     "no-empty-function": [ 2, { "allow": [ "arrowFunctions" ] } ],
@@ -87,7 +85,7 @@
     "no-undef-init": 2,
     "no-unneeded-ternary": 2,
     "no-unused-expressions": 2,
-    "no-unused-vars": [ 2, { "varsIgnorePattern": "^_" } ],
+    "no-unused-vars": [ 1, { "argsIgnorePattern": "^_" } ],
     "no-useless-computed-key": 2,
     "no-useless-rename": 2,
     "no-useless-return": 2,
@@ -117,6 +115,7 @@
     "react/jsx-indent-props": [ 2, 2 ],
     "react/jsx-tag-spacing": 2,
     "react/self-closing-comp": 2,
+    "react/jsx-curly-newline": [ 2, "consistent" ],
     "require-await": 2,
     "rest-spread-spacing": 2,
     "space-before-function-paren": [ 2, {
@@ -142,5 +141,96 @@
     "switch-colon-spacing": 2,
     "template-curly-spacing": 2,
     "wrap-iife": 2
-  }
+  },
+  "overrides": [
+    {
+      "files": [ "*.d.ts" ],
+      "rules": {
+        "spaced-comment": 0
+      }
+    },
+    {
+      "files": [ "*.ts", "*.tsx" ],
+      "parser": "@typescript-eslint/parser",
+      "extends": [
+        "eslint:recommended", // extends key not inherited from root
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+      "plugins": [ "@typescript-eslint" ],
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
+      "rules": {
+        "no-invalid-this": 0,
+        "no-useless-return": 0,
+
+        "@typescript-eslint/array-type": [ 2, {
+          "default": "array-simple",
+          "readonly": "array-simple"
+        } ],
+        "@typescript-eslint/ban-types": [ 2, {
+          "types": {
+            "Object": { "message": "Prefer: { }", "fixWith": "{ }" }
+          }
+        } ],
+        "@typescript-eslint/camelcase": 0,
+        "@typescript-eslint/consistent-type-definitions": 2,
+        "@typescript-eslint/explicit-function-return-type": 0,
+        "@typescript-eslint/explicit-member-accessibility": [ 2, {
+          "accessibility": "explicit"
+        } ],
+        "func-call-spacing": 0,
+        "@typescript-eslint/func-call-spacing": 2,
+        "indent": 0,
+        "@typescript-eslint/indent": [ 2, 2, {
+          "SwitchCase": 1
+        } ],
+        "@typescript-eslint/member-delimiter-style": [ 2, {
+          "singleline": { "delimiter": "comma" }
+        } ],
+        "@typescript-eslint/no-misused-promises": [ 2, { "checksVoidReturn": false } ],
+        "no-empty-function": 0,
+        "@typescript-eslint/no-empty-function": [ 2, {
+          "allow": [ "arrowFunctions" ]
+        } ],
+        "@typescript-eslint/no-explicit-any": 0,
+        "no-extra-parens": 0,
+        "@typescript-eslint/no-extra-parens": [ 2, "all", { "nestedBinaryExpressions": false } ],
+        "no-extra-semi": 0,
+        "@typescript-eslint/no-extra-semi": 2,
+        "no-unused-vars": 0,
+        "@typescript-eslint/no-unused-vars": [ 2, {
+          "argsIgnorePattern": "^_"
+        } ],
+        "@typescript-eslint/no-var-requires": 2,
+        "@typescript-eslint/prefer-for-of": 2,
+        "@typescript-eslint/prefer-function-type": 2,
+        "quotes": 0,
+        "@typescript-eslint/quotes": [ 2, "backtick", {
+          "avoidEscape": true
+        } ],
+        "require-await": 0,
+        "@typescript-eslint/require-await": 2,
+        "semi": 0,
+        "@typescript-eslint/semi": [ 2, "always" ],
+        "space-before-function-paren": 0,
+        "@typescript-eslint/space-before-function-paren": [ 2, {
+          "anonymous": "never",
+          "named": "never"
+        } ],
+        "@typescript-eslint/type-annotation-spacing": 2,
+        "@typescript-eslint/unbound-method": 0,
+        "@typescript-eslint/unified-signatures": 2
+      }
+    },
+    {
+      "files": [ "*.tsx" ],
+      "rules": {
+        "@typescript-eslint/no-unsafe-member-access": 0,
+        "@typescript-eslint/no-unsafe-assignment": 0
+      }
+    }
+  ]
 }

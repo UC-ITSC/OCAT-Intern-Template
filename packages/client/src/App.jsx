@@ -6,10 +6,12 @@ import { NewAssessment } from './pages/Assessments/NewAssessment.jsx';
 import { AssessmentList } from './pages/Assessments/AssessmentList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export const App = () => <SiteWrapper>
+const App = () => <SiteWrapper>
   <BrowserRouter>
     <Route path="/" component={DashboardBulletin} />
     <Route path="/assessment/new" component={NewAssessment} />
 
   </BrowserRouter>
 </SiteWrapper>;
+
+export default App;
