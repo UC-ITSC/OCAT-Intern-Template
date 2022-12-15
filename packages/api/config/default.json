@@ -1,6 +1,6 @@
 {
   "server": {
-    "port": 3000
+    "port": 4000
   },
   "database": {
     "host": "localhost",
@@ -9,6 +9,7 @@
     "password": "postgres",
     "name": "ocat",
     "dialect": "pg",
-    "minconnections": 2
+    "maxConnections": 10,
+    "minConnections": 2
   }
 }

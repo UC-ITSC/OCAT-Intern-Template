@@ -23,3 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 config.json
+config/*
+!config/default.json

@@ -1,21 +1,21 @@
-const { config } = require(`../../utils`);
+const config = require(`config`);
 const pkg = require(`../../../package.json`);
 
 const knex = require(`knex`)({
-  client: config.database.dialect,
+  client: config.get(`database.dialect`),
   connection: {
     application_name: pkg.name,
     charset: `utf8`,
-    database: config.database.name,
-    host: config.database.host,
-    password: config.database.password,
-    port: config.database.port,
-    user: config.database.username,
+    database: config.get(`database.name`),
+    host: config.get(`database.host`),
+    password: config.get(`database.password`),
+    port: config.get(`database.port`),
+    user: config.get(`database.username`),
   },
   debug: false,
   pool: {
-    max: config.database.maxconnections || 10,
-    min: config.database.minconnections || 2,
+    max: config.get(`database.maxConnections`),
+    min: config.get(`database.minConnections`),
   },
 });
 

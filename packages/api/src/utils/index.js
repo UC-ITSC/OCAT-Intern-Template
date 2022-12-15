@@ -1,4 +1,3 @@
-const config = require(`./Config`);
 const ErrorHandler = require(`./ErrorHandler`);
 const ResponseHandler = require(`./ResponseHandler`);
 const RouteLoader = require(`./RouteLoader`);
@@ -9,5 +8,4 @@ module.exports = {
   Password,
   ResponseHandler,
   RouteLoader,
-  config,
 };

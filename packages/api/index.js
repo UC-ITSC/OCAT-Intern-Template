@@ -1,7 +1,8 @@
 const { createServer, plugins, pre } = require(`restify`);
+const config = require(`config`);
 
 const pkg = require(`./package.json`);
-const { ErrorHandler, RouteLoader, config } = require(`./src/utils`);
+const { ErrorHandler, RouteLoader } = require(`./src/utils`);
 
 const corsMiddleware = require(`restify-cors-middleware`);
 const uuid = require(`uuid`);
@@ -40,8 +41,9 @@ server.use(plugins.bodyParser({ mapParams: true }));
 RouteLoader.load(server);
 
 if (require.main === module) {
+  const port = config.get(`server.port`);
   // eslint-disable-next-line no-console
-  server.listen(config.server.port, console.log(`Listening on port: ${config.server.port}`));
+  server.listen(port, console.log(`Listening on port: ${port}`));
 } else {
   module.exports = server;
 }
