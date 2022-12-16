@@ -5,7 +5,7 @@ import { Navigation } from '.';
 export const SiteWrapper = ({ children }) => <>
   <Navigation />
 
-  <main role="main" class="flex-shrink-0" style={{ paddingTop: `5rem` }}>
+  <main role="main" className="flex-shrink-0" style={{ paddingTop: `5rem` }}>
     <Container>
       <Row>
         <Col>

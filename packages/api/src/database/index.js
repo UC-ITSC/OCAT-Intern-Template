@@ -15,6 +15,9 @@ const {
 } = config.get(`database`);
 
 const sequelize = new Sequelize(database, username, password, {
+  define: {
+    underscored: true,
+  },
   dialect,
   dialectOptions: {
     application_name: pkg.name,

@@ -7,6 +7,7 @@ const cors = require(`cors`);
 const config = require(`config`);
 const { router } = require(`./routes`);
 const { BooleanParser, ErrorHandler } = require(`./utils`);
+require(`./database`);
 
 const app = express();
 

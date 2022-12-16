@@ -12,6 +12,7 @@ InferAttributes<Assessment>,
 InferCreationAttributes<Assessment>
 > {
   declare public id: CreationOptional<number>;
+  declare public instrumentType: string;
   declare public score: number;
   declare public riskLevel: string;
   declare public catName: string;
@@ -24,8 +25,16 @@ InferCreationAttributes<Assessment>
     Assessment.init({
       /* eslint-disable sort-keys */
       id: {
+        allowNull: false,
+        autoIncrement: true,
+        autoIncrementIdentity: true,
+        field: `id`,
         primaryKey: true,
         type: DataTypes.INTEGER,
+      },
+      instrumentType: {
+        allowNull: false,
+        type: DataTypes.STRING,
       },
       score: {
         allowNull: false,

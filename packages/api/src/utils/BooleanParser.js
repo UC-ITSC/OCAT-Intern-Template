@@ -51,6 +51,7 @@ function parseObject(obj) {
 
 const BooleanParser = (req, res, next) => {
   req.query = parseObject(req.query);
+  req.body = parseObject(req.body);
   next();
 };
 

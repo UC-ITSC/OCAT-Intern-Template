@@ -4,8 +4,8 @@ import { AssessmentService } from '../../services/AssessmentService';
 
 export const NewAssessment = () => {
 
-  // create a form that utilizes the "onSubmit" function to send data to OCAT/client/services/AssessmentService.js and
-  // then onto the OCAT/server/routes/AssessmentAPI express API
+  // create a form that utilizes the "onSubmit" function to send data to
+  // packages/client/src/services/AssessmentService.js and then onto the packages/api/src/routes/assessment express API
   const onSubmit = async (data) => {
     await AssessmentService.submit(data);
   };

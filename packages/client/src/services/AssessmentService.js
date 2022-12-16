@@ -4,7 +4,7 @@ export class AssessmentService {
   static submit(assessment) {
     try {
       // Choose the correct method, url, and data to send
-      // in a request to the express OCAT/server/routes/Assessment/index.js
+      // in a request to the express packages/api/src/routes/assessment.js
       // NOTE: the http.config file automatically adds /api to the front of your url
       return Axios.METHOD(`/some-url`, { })
         .then(response => response.data);
@@ -17,7 +17,7 @@ export class AssessmentService {
   static getList() {
     try {
       // Choose the correct method, url, and data to send
-      // in a request to the express OCAT/server/routes/Assessment/index.js
+      // in a request to the express packages/api/src/routes/assessment.js
       // NOTE: the http.config file automatically adds /api to the front of your url
       return Axios.METHOD(`/some-url`, {
         params: {

@@ -5,7 +5,7 @@
     "index.js",
     "config.json"
   ],
-  "ext": ".js,.json",
+  "ext": ".js,.ts,.json",
   "ignore": [],
   "exec": "ts-node ./src/index.js"
 }
