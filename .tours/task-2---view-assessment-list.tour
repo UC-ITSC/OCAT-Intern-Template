@@ -24,27 +24,27 @@
     },
     {
       "file": "packages/client/src/pages/Assessments/AssessmentList.jsx",
-      "description": "# Assessment List\n\nFirst, fetch the assessments that you've created on the back-end by using the `getList()` function in the Assessment Service @ [OCAT/client/services/AssessmentService.js](./OCAT/client/services/AssessmentService.js)",
+      "description": "# Assessment List\n\nFirst, fetch the assessments that you've created on the back-end by using the `getList()` function in the Assessment Service @ [packages/client/src/services/AssessmentService.js](./packages/client/src/services/AssessmentService.js)",
       "line": 6
     },
     {
       "file": "packages/client/src/services/AssessmentService.js",
-      "description": "# AssessmentService.getList()\n\nInside the `AssessmentService.getList()` function, send a GET request to the Express Router API @ `/api/assessment/list`\n\nThis will go to the back-end Express server @ [OCAT/server/routes/AssessmentAPI/index.js](./OCAT/server/routes/AssessmentAPI/index.js)",
+      "description": "# AssessmentService.getList()\n\nInside the `AssessmentService.getList()` function, send a GET request to the Express Router API @ `/api/assessment/list`\n\nThis will go to the back-end Express server @ [packages/api/src/routes/assessment.js](./packages/api/src/routes/assessment.js)",
       "line": 20
     },
     {
-      "file": "packages/api/src/routes/Assessment/index.js",
-      "description": "# API Router - /assessment/list\n\nReceive the GET request from the front-end server and call the `.getList()` function from [API/src/microservices/Assessment-Service/index.js](./API/src/microservices/Assessment-Service/index.js)\n\nReturn assessment data to the front-end",
+      "file": "packages/api/src/routes/assessment.js",
+      "description": "# API Router - /assessment/list\n\nReceive the GET request from the front-end server and call the `.getList()` function from [packages/api/src/microservices/Assessment-Service.js](./packages/api/src/microservices/Assessment-Service.js)\n\nReturn assessment data to the front-end",
       "line": 34
     },
     {
-      "file": "packages/api/src/microservices/Assessment-Service/index.js",
-      "description": "# Assessment Microservice\n\nUse Bookshelf to fetch the assessment data from the PostgreSQL database and return it to the front-end User Interface (UI).\n\nHINT: use Bookshelf's .fetchAll() function: https://bookshelfjs.org/api.html#Model-instance-fetchAll\n",
+      "file": "packages/api/src/microservices/Assessment-Service.js",
+      "description": "# Assessment Microservice\n\nUse Sequelize to fetch the assessment data from the PostgreSQL database and return it to the front-end User Interface (UI).\n\nHINT: use Sequelize's .findAll() function: https://sequelize.org/api/v6/class/src/model.js~model#static-method-findAll\n",
       "line": 18
     },
     {
       "file": "packages/client/src/pages/Assessments/AssessmentList.jsx",
-      "description": "# Return Data\n\nReturn the assessment data all the way back to the front-end UI\n\nThe data will have to follow the same path in reverse back up:\n\nAPI/src/libs > API/src/routes > OCAT/server/libs > OCAT/server/routes > OCAT/client/services > OCAT/client/pages/Assessments/AssessmentList.jsx",
+      "description": "# Return Data\n\nReturn the assessment data all the way back to the front-end UI\n\nThe data will have to follow the same path in reverse back up:\n\npackages/api/src/microservices > packages/api/src/routes > packages/client/src/services > packages/client/src/pages/Assessments/AssessmentList.jsx",
       "line": 10
     },
     {

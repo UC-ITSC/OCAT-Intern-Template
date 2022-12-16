@@ -34,12 +34,12 @@
       "line": 13
     },
     {
-      "file": "packages/api/src/microservices/Assessment-Service/index.js",
-      "description": "# Assessment Microservice\n\nThis step will introduce an ORM (Object-Relational Mapping) tool we use for this project called \"`Bookshelf.js`\" that works in tandem with \"`knex.js`\"\nUse Bookshelf to save the assessment data from the front-end form into the PostgreSQL database.\n\nHINT: use Bookshelf's `.save()` function: https://bookshelfjs.org/api.html#Model-instance-save\n",
+      "file": "packages/api/src/microservices/Assessment-Service.js",
+      "description": "# Assessment Microservice\n\nThis step will introduce an ORM (Object-Relational Mapping) tool we use for this project called \"`Sequelize`\"\nUse Sequelize to save the assessment data from the front-end form into the PostgreSQL database.\n\nHINT: use Bookshelf's `.save()` function: https://bookshelfjs.org/api.html#Model-instance-save\n",
       "line": 8
     },
     {
-      "file": "packages/api/src/microservices/Assessment-Service/index.js",
+      "file": "packages/api/src/microservices/Assessment-Service.js",
       "description": "# Finish Issue\n\n1. Test manually in the browser to make sure your form is working and submitting properly\n2. [Create a new branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/managing-branches#creating-a-branch)\n3. [Create a pull request into the \"master\" branch](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)\n4. [Get someone to review your pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)\n5. Once happy with your changes, [merge your pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request)\n6. Go to the next issue",
       "line": 13
     }
