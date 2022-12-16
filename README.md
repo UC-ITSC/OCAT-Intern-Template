@@ -3,24 +3,24 @@
 ## Purpose and Context
 
 - Web Development
-  - The goal of this application is for you to explore and demonstrate understanding of web development using some of our core technologies. You must use React.js on the client-side, a Bootstrap template for the UI, Node.js/Express for the server-side, Bookshelf.js as the ORM, restify for the API back-end, PostgreSQL as the database, and Bcrypt to encrypt passwords in PostgreSQL. You must also create a git repository on github.com and push all of your code there frequently.
+  - The goal of this application is for you to explore and demonstrate understanding of web development using some of our core technologies. You must use React.js on the client-side, a Bootstrap template for the UI, Node.js/Express for the back-end, Sequelize as the ORM, PostgreSQL as the database, and Bcrypt to encrypt passwords in PostgreSQL. You must also create a git repository on github.com and push all of your code there frequently.
 
 - Criminal Justice
-  - The Risk Assessment System is a Web-based Application that allows for assessing the risk of offender [recidivism](https://nij.ojp.gov/topics/corrections/recidivism).  By assessing the likelihood that an offender might commit another offense, the system helps officers determine how best to help the offender moving forward.  In ORAS, we do this by automatically generating caseplans, reports, and maintaining the full timeline of an offender's record while they exist in the system.  This process was developed based on research performed by the UC Corrections Institute (UCCI) and has been proven to reduce the recidivism of offenders over time.
+  - The Risk Assessment (RA) System is a Web-based Application that allows for assessing the risk of offender [recidivism](https://nij.ojp.gov/topics/corrections/recidivism). By assessing the likelihood that an offender might commit another offense, the system helps officers determine how best to help the offender moving forward. In RA, we do this by automatically generating caseplans, reports, and maintaining the full timeline of an offender's record while they exist in the system. This process was developed based on research performed by the UC Corrections Institute (UCCI) and has been proven to reduce the recidivism of offenders over time.
 
 - The OCAT Internship Project
-  - Through OCAT, you will have the opportunity to explore a core piece of ORAS by building an interface for both creating assessments and monitoring assessments previously performed by users.  Your ITSC mentors will guide you through this process, but we highly suggest that you make frequent use of your OCAT internship peers.  To be clear, we do not want you copying code or handing out answers to other interns.  However, this is a collaborative process, and asking questions when you're confused is an important part of learning!  On the flip-side of that, teaching someone else or helping them through a problem is the best way to further cement that knowledge in your own mind.  So ask questions when you're stuck and help point your fellow teammates in the right direction!  Good luck!
+  - Through OCAT, you will have the opportunity to explore a core piece of ORAS by building an interface for both creating assessments and monitoring assessments previously performed by users. Your ITSC mentors will guide you through this process, but we highly suggest that you make frequent use of your OCAT internship peers. To be clear, we do not want you copying code or handing out answers to other interns. However, this is a collaborative process, and asking questions when you're confused is an important part of learning! On the flip-side of that, teaching someone else or helping them through a problem is the best way to further cement that knowledge in your own mind. So ask questions when you're stuck and help point your fellow teammates in the right direction! Good luck!
 
 ## ITSC Guidelines
 
 - Setup
-  - PLEASE ask if you're having trouble setting up your project repository, project board, first branch, or development environment.  The mentors are here to help you!  We want to make sure you get off to a great start and this part is often the most challenging, so please don't hesitate to come to us immediately with any setup concerns!
+  - PLEASE ask if you're having trouble setting up your project repository, project board, first branch, or development environment. The mentors are here to help you! We want to make sure you get off to a great start and this part is often the most challenging, so please don't hesitate to come to us immediately with any setup concerns!
 - Hour/Day Policy
   - If you've been stuck on something for two hours, ask a fellow intern!
   - If you've been stuck on something for a full day, ask a mentor!
 - Process for Getting Unstuck
     1. Search through the available resources in this document (located at the bottom of the page and throughout)
-    2. Google!  This is your most valuable resource and learning how to search the internet for your answer is going to be your most valuable skill moving forward!  Forum resources like StackOverflow can be extremely helpful.  In web development, there's almost always someone who has encountered your problem before.  The trick lies in finding that answer!
+    2. Google! This is your most valuable resource and learning how to search the internet for your answer is going to be your most valuable skill moving forward! Forum resources like StackOverflow can be extremely helpful. In web development, there's almost always someone who has encountered your problem before. The trick lies in finding that answer!
     3. Ask an OCAT internship peer
     4. Ask an OCAT mentor
 
@@ -30,17 +30,17 @@
   - Making a Pull Request
     - Create a Pull Request (PR) from your development branch (your current branch) into master (the main branch)
       - [Creating a Pull Request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
-    - Reach out to one of your fellow OCAT interns and ask them nicely to review your code.  Include a link to the Pull Request you'd like them to review
-    - Take any suggestions with a grain of salt.  Remember, this is YOUR application.  Make any changes you agree with and then merge the Pull Request
+    - Reach out to one of your fellow OCAT interns and ask them nicely to review your code. Include a link to the Pull Request you'd like them to review
+    - Take any suggestions with a grain of salt. Remember, this is YOUR application. Make any changes you agree with and then merge the Pull Request
   - Reviewing a Pull Request (PR)
     - [Reviewing a Pull Request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews)
     - Go the link supplied by whichever OCAT intern has requested a review from you
     - Look through their code, offering suggestions and critiques
       - You should try to:
       - Understand each part of the code and look for ways to improve it
-      - Be kind.  Remember that this is someone else's work that they've spent a lot of time on
-      - Balance criticism with praise.  It is tempting to only point out the negatives.  If you see something you like, tell them!
-      - Feel free to ask questions.  In the end, this is a learning process.  Feel free to ask questions if you don't understand something in the code.
+      - Be kind. Remember that this is someone else's work that they've spent a lot of time on
+      - Balance criticism with praise. It is tempting to only point out the negatives. If you see something you like, tell them!
+      - Feel free to ask questions. In the end, this is a learning process. Feel free to ask questions if you don't understand something in the code.
   - After a Pull Request (PR) has been approved, merge it and move on
     - [Merging a Pull Request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request)
     - Once merged, create a new branch from master and start on your next issue
@@ -55,25 +55,25 @@
 - Back-End Framework
   - [Express](http://expressjs.com/)
   - [Node.js](https://nodejs.org/en/)
-  - [Restify](http://restify.com/)
-  - Database ORM -> [Bookshelf.js](http://bookshelfjs.org/) and [knex.js](http://knexjs.org/)
+  - Database ORM -> [Sequelize](https://sequelize.org/)
   - Password Encryption -> [Bcrypt](https://github.com/kelektiv/node.bcrypt.js)
 - Database
   - [PostgreSQL](https://www.postgresql.org/)
 - Package Manager (for Node.js)
   - [npm](https://www.npmjs.com/)
 - Task Runners
-  - [webpack](https://webpack.js.org/)
+  - [webpack](https://webpack.js.org/) through [create-react-app](https://create-react-app.dev/)
 
 ## Architecture
 
-The application must be created with two "layers" using an API model and pseudo-microservices (the "skeleton" for this has already been provided within the template repository you'll start with). Once the HTML page is rendered, all future communication between the client/server should be done using HTTP requests sending/receiving JSON.
+The application must be created with two "layers" using an API model (the "skeleton" for this has already been provided within the template repository you'll start with). Once the HTML page is rendered, all future communication between the client/server should be done using HTTP requests sending/receiving JSON.
 
-- API: thin layer allowing for directing of requests from the front-end to the microservices.  Allows for outside integration.
+- Client: User interface for interacting with the API (the "front-end" of the application)
+- API: layer that receives requests from the front-end or a 3rd party and processes the request with the database. Allows for outside integration.
   - [Basic API explanation](https://www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/)
+  - [CRUD Basics](https://www.codecademy.com/articles/what-is-crud)
 - Microservices: complex layer of services that accept requests from the API and communicate with the database.
   - [Basic Microservice explanation](https://smartbear.com/solutions/microservices/)
-  - [CRUD Basics](https://www.codecademy.com/articles/what-is-crud)
 
 - The below diagram resembles what you should attempt to reproduce:
 ![OCAT Sample Architecture](./docs/attachments/OCAT_Architecture.png)
@@ -100,7 +100,7 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
     - Resources:
         - [Creating a Repository from a Template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
 2. Copy the Template Project Board
-    - NOTE: This is something you should keep constantly up-to-date.  It is how we will track your progress, and it will facilitate code review and collaboration with your OCAT internship peers.
+    - NOTE: This is something you should keep constantly up-to-date. It is how we will track your progress, and it will facilitate code review and collaboration with your OCAT internship peers.
         - Template:
             - [OCAT Project Board](https://github.com/UC-ITSC/OCAT_Intern_Template/projects/1)
         - Resources:
@@ -116,26 +116,21 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
 
 1. Clone your new repository
     - [Cloning a Repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
-2. [Install NodeJS 12.x](docs/install_nodejs.md) on your computer (__Do NOT install Node 14 or the project will not run__)
+2. [Install NodeJS 16.x](docs/install_nodejs.md) on your computer
 3. [Install PostgreSQL](docs/install_postgres.md) using the [instructions in our docs](docs/install_postgres.md)
-4. OCAT
-    - Navigate into the OCAT/ directory ``cd OCAT/``
-    - Verify that the config.json for both directories is correct
-        - Begins as config.example.json and needs to be modified to match your environment
+4. Running the project
+    - Navigate into the packages/client/ directory ``cd packages/client/``
     - ``npm install``
         - [npm install](https://docs.npmjs.com/cli/install#:~:text=npm%20install%20(in%20package%20directory,directory)%20as%20a%20global%20package.)
-    - Open a second terminal window
-        1. Verify that both terminals are in the OCAT/ directory
-        2. Terminal 1
-            - ``npm run dev``
-        3. Terminal 2
-            - ``npm run build:dev``
+    - ``npm start``
+    - Open a second terminal window and navigate into the packages/api/ directory ``cd packages/api/``
+    - ``npm install``
+    - ``npm start``
 5. Verify that all recommended extensions are installed
     - [dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
     - [formulahendry.auto-rename-tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
     - [mgmcdermott.vscode-language-babel](https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel)
     - [visualstudioexptteam.vscodeintellicode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
-    - [coenraads.bracket-pair-colorizer-2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
     - [streetsidesoftware.code-spell-checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
     - [gruntfuggly.todo-tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
     - [vsls-contrib.codetour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour)
@@ -148,8 +143,8 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
 ### C. Features
 
 - NOTE: These are the general requirements for features 1, 2 and 3. For specific instructions, see the code tours.
-- NOTE: Please do any login-related pieces near the end.  Otherwise, you may spend the entire time developing a login process and you will not have much to show come presentation time.
-- NOTE: All work should be done on a separate "branch" so that it can be code reviewed.  Below are instructions on how to create a new branch:
+- NOTE: Please do any login-related pieces near the end. Otherwise, you may spend the entire time developing a login process and you will not have much to show come presentation time.
+- NOTE: All work should be done on a separate "branch" so that it can be code reviewed. Below are instructions on how to create a new branch:
   - [Creating a branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-branches#creating-a-branch)
 
 1. Allow Users to submit an assessment with the following information
@@ -164,7 +159,7 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
         - Audit log of when the assessment was created/deleted (datetime with timezone)
     - Recommend using [React Hook Form](https://react-hook-form.com/)
 2. Implement a bootstrap style template to make your site look presentable
-    - NOTE: Do not spend too much time on this.  We want the application to look good but not at the risk of hindering the overall completion of your project
+    - NOTE: Do not spend too much time on this. We want the application to look good but not at the risk of hindering the overall completion of your project
 3. Allow Users and Supervisors to sort/search/filter/review submitted assessments from a list
     - Should only return non-deleted assessments
     - The list should include (at minimum) cat name, cat date of birth, instrument, score, risk level, and creation date
@@ -173,7 +168,7 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
     - This must authenticate against the database using [Bcrypt](https://www.npmjs.com/package/bcrypt)
 5. Allow Supervisors to delete assessment submissions
     - This should be a soft delete in the database (a soft delete does not remove the data from the database, it sets a flag on the record so it does not show up on the front-end)
-    - Recommend using [bookshelf-soft-delete](https://www.npmjs.com/package/bookshelf-soft-delete)
+    - Soft deletes are built into Sequelize
 6. Prepare your presentation!
 
 ## Resources
@@ -201,14 +196,14 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
 - [Express API Reference](http://expressjs.com/en/4x/api.html)
 - Video: [Learn Express & Node.js in 15 Minutes](https://www.youtube.com/watch?v=JlgKybraoy4)
 
-### Bookshelf.js
+### Sequelize (ORM)
 
-- [API Reference](https://bookshelfjs.org/api.html)
-- [Bookshelf.js: A Node.js ORM](http://stackabuse.com/bookshelf-js-a-node-js-orm/)
-- [Helpful Example](https://travishorn.com/what-did-i-learn-this-week-knex-js-bookshelf-js-95d3490e3a6f)
-- [More Examples](http://zetcode.com/javascript/bookshelf/)
-- [bookshelf's npm page](https://www.npmjs.com/package/bookshelf)
-- Video: [Bookshelf.js Tutorial - An Introduction to Bookshelf.js](https://www.youtube.com/watch?v=WyRoEQjtDDY)
+- [API Reference](https://sequelize.org/api/v6/identifiers)
+- [What is Sequelize?](https://www.educative.io/answers/what-is-sequelizejs)
+- [Using Sequelize with TypeScript](https://sequelize.org/docs/v6/other-topics/typescript/)
+- [Sequelize Example and Model Builder](https://sequelizeui.app/schema/employees)
+- [Sequelize's npm page](https://www.npmjs.com/package/sequelize)
+- Video: [Sequelize Tutorial - Getting Started with Sequelize and PostgreSQL](https://www.youtube.com/watch?v=p-yKR7GusqM)
 
 ### React.js HTTP Requests with Axios
 
