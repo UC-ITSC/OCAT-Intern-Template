@@ -1,4 +1,4 @@
-const { Assessments } = require(`../Database`);
+const { Assessment } = require(`../database/models`);
 
 exports.submit = async (assessment) => {
   // use the bookshelf model Assessments from API/src/microservices/Database to save

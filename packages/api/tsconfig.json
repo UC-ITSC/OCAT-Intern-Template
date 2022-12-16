@@ -1,0 +1,23 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "module": "commonjs",
+    "outDir": "dist",
+    "sourceMap": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "src"
+  ]
+}

@@ -3,13 +3,16 @@
     "port": 4000
   },
   "database": {
-    "host": "localhost",
-    "port": 5432,
     "username": "postgres",
     "password": "postgres",
-    "name": "ocat",
-    "dialect": "pg",
-    "maxConnections": 10,
-    "minConnections": 2
+    "database": "ocat",
+    "host": "localhost",
+    "port": 5432,
+    "dialect": "postgres",
+    "pool": {
+      "max": 5,
+      "min": 0
+    },
+    "logging": false
   }
 }

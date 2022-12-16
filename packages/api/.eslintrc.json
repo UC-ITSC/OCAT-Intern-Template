@@ -1,6 +1,6 @@
 {
   "extends": [ "eslint:recommended" ],
-  "plugins": [ "import", "sort-destructure-keys" ],
+  "plugins": [ "import", "sort-destructure-keys", "import-quotes" ],
   "parserOptions": {
     "sourceType": "module"
   },
@@ -31,13 +31,17 @@
     "function-paren-newline": [ 2, "consistent" ],
     "id-blacklist": [
       "error", "any",
-      "Number", "number",
+      "Number",
       "String", "string",
       "Boolean", "boolean",
       "function", "Function"
     ],
     "import/order": 2,
-    "indent": [ 2, 2, { "SwitchCase": 1 } ],
+    "import-quotes/import-quotes": [ 2, "single" ],
+    "indent": [ 2, 2, {
+      "SwitchCase": 1,
+      "offsetTernaryExpressions": true
+    }],
     "key-spacing": 2,
     "keyword-spacing": 2,
     "lines-between-class-members": [ 2, "always", { "exceptAfterSingleLine": true } ],
@@ -125,5 +129,97 @@
     "switch-colon-spacing": 2,
     "template-curly-spacing": 2,
     "wrap-iife": 2
-  }
+  },
+  "overrides": [
+    {
+      "files": [ "*.d.ts" ],
+      "rules": {
+        "spaced-comment": 0
+      }
+    },
+    {
+      "files": [ "*.ts", "*.tsx" ],
+      "parser": "@typescript-eslint/parser",
+      "plugins": [ "@typescript-eslint" ],
+      "extends": [
+        "eslint:recommended", // extends key not inherited from root
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
+      "rules": {
+        "no-invalid-this": 0,
+        "no-useless-return": 0,
+        "no-shadow": 0,
+        "@typescript-eslint/array-type": [ 2, {
+          "default": "array-simple",
+          "readonly": "array-simple"
+        } ],
+        "@typescript-eslint/ban-types": [ 2, {
+          "types": {
+            "Object": { "message": "Prefer: { }", "fixWith": "{ }" }
+          }
+        } ],
+        "@typescript-eslint/camelcase": 0,
+        "@typescript-eslint/consistent-type-definitions": 2,
+        "@typescript-eslint/explicit-function-return-type": 0,
+        "@typescript-eslint/explicit-member-accessibility": [ 2, {
+          "accessibility": "explicit"
+        } ],
+        "func-call-spacing": 0,
+        "@typescript-eslint/func-call-spacing": 2,
+        "indent": 0,
+        "@typescript-eslint/indent": [ 2, 2, {
+          "SwitchCase": 1,
+          "offsetTernaryExpressions": true
+        } ],
+        "@typescript-eslint/naming-convention": [ 2, {
+            "selector": "interface",
+            "format": ["PascalCase"]
+          }
+        ],
+        "@typescript-eslint/no-misused-promises": [ 2, { "checksVoidReturn": false } ],
+        "@typescript-eslint/no-shadow": 2,
+        "@typescript-eslint/member-delimiter-style": [ 2, {
+          "singleline": { "delimiter": "comma" }
+        } ],
+        "no-empty-function": 0,
+        "@typescript-eslint/no-empty-function": [ 2, {
+          "allow": [ "arrowFunctions" ]
+        } ],
+        "@typescript-eslint/no-explicit-any": 0,
+        "no-extra-parens": 0,
+        "@typescript-eslint/no-extra-parens": 2,
+        "no-extra-semi": 0,
+        "@typescript-eslint/no-extra-semi": 2,
+        "no-unused-vars": 0,
+        "@typescript-eslint/no-unused-vars": [ 2, {
+          "varsIgnorePattern": "^_"
+        } ],
+        "@typescript-eslint/no-var-requires": 2,
+        "@typescript-eslint/prefer-for-of": 2,
+        "@typescript-eslint/prefer-function-type": 2,
+        "quotes": 0,
+        "@typescript-eslint/quotes": [ 2, "backtick", {
+          "avoidEscape": true
+        } ],
+        "require-await": 0,
+        "@typescript-eslint/require-await": 2,
+        "semi": 0,
+        "@typescript-eslint/semi": [ 2, "always" ],
+        "space-before-function-paren": 0,
+        "@typescript-eslint/space-before-function-paren": [ 2, {
+          "anonymous": "never",
+          "named": "never"
+        } ],
+        "@typescript-eslint/triple-slash-reference": 0,
+        "@typescript-eslint/type-annotation-spacing": 2,
+        "@typescript-eslint/unbound-method": 0,
+        "@typescript-eslint/unified-signatures": 2
+      }
+    }
+  ]
 }
