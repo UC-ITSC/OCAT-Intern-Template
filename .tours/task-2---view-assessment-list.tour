@@ -4,7 +4,7 @@
   "steps": [
     {
       "file": "packages/client/src/App.jsx",
-      "description": "# View Assessment List Issue\n\nMake sure you're starting on the master branch with your latest merged changes\n\n1. [Checkout master](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/managing-branches#switching-between-branches)\n2. [Pull down the most recent changes](https://github.com/git-guides/git-pull)",
+      "description": "# View Assessment List Issue\n\nMake sure you're starting on the main branch with your latest merged changes\n\n1. [Checkout main](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/managing-branches#switching-between-branches)\n2. [Pull down the most recent changes](https://github.com/git-guides/git-pull)",
       "line": 18
     },
     {
@@ -54,7 +54,7 @@
     },
     {
       "file": "packages/client/src/pages/Assessments/AssessmentList.jsx",
-      "description": "# Finish Issue\n\n1. Test manually to make sure your table is working properly\n2. [Create a new branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/managing-branches#creating-a-branch)\n3. [Create a pull request into the \"master\" branch](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)\n4. [Get someone to review your pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)\n5. Once happy with your changes, [merge your pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request)\n6. Go to the next issue",
+      "description": "# Finish Issue\n\n1. Test manually to make sure your table is working properly\n2. [Create a new branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/managing-branches#creating-a-branch)\n3. [Create a pull request into the \"main\" branch](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)\n4. [Get someone to review your pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)\n5. Once happy with your changes, [merge your pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request)\n6. Go to the next issue",
       "line": 21
     }
   ],

@@ -28,7 +28,7 @@
 
 - Every [Issue](./docs/issues.md) should be code reviewed by another OCAT internship-peer
   - Making a Pull Request
-    - Create a Pull Request (PR) from your development branch (your current branch) into master (the main branch)
+    - Create a Pull Request (PR) from your development branch (your current branch) into main (the main branch)
       - [Creating a Pull Request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
     - Reach out to one of your fellow OCAT interns and ask them nicely to review your code. Include a link to the Pull Request you'd like them to review
     - Take any suggestions with a grain of salt. Remember, this is YOUR application. Make any changes you agree with and then merge the Pull Request
@@ -43,7 +43,7 @@
       - Feel free to ask questions. In the end, this is a learning process. Feel free to ask questions if you don't understand something in the code.
   - After a Pull Request (PR) has been approved, merge it and move on
     - [Merging a Pull Request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request)
-    - Once merged, create a new branch from master and start on your next issue
+    - Once merged, create a new branch from main and start on your next issue
 
 ## Technologies
 
