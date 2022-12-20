@@ -8,19 +8,8 @@
 - The OCAT Internship Project
   - Through OCAT, you will have the opportunity to explore a core piece of ORAS by building an interface for both creating assessments and monitoring assessments previously performed by users. Your ITSC mentors will guide you through this process, but we highly suggest that you make frequent use of your OCAT internship peers. To be clear, we do not want you copying code or handing out answers to other interns. However, this is a collaborative process, and asking questions when you're confused is an important part of learning! On the flip-side of that, teaching someone else or helping them through a problem is the best way to further cement that knowledge in your own mind. So ask questions when you're stuck and help point your fellow teammates in the right direction! Good luck!
 
-## ITSC Guidelines
 
-- Setup
-  - PLEASE ask if you're having trouble setting up your project repository, project board, first branch, or development environment. The mentors are here to help you! We want to make sure you get off to a great start and this part is often the most challenging, so please don't hesitate to come to us immediately with any setup concerns!
-- Hour/Day Policy
-  - If you've been stuck on something for two hours, ask a fellow intern!
-  - If you've been stuck on something for a full day, ask a mentor!
-- Process for Getting Unstuck
-    1. Search through the available resources in this document (located at the bottom of the page and throughout)
-    2. Google! This is your most valuable resource and learning how to search the internet for your answer is going to be your most valuable skill moving forward! Forum resources like StackOverflow can be extremely helpful. In web development, there's almost always someone who has encountered your problem before. The trick lies in finding that answer!
-    3. Ask an OCAT internship peer
-    4. Ask an OCAT mentor
-- [Code Review](./docs/code_review.md) Guidelines
+
 ## Technologies
 
 - Version Control
@@ -147,8 +136,20 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
     - Soft deletes are built into Sequelize
 6. Prepare your presentation!
 
-## Resources
+## ITSC Guidelines
+- Setup
+  - PLEASE ask if you're having trouble setting up your project repository, project board, first branch, or development environment. The mentors are here to help you! We want to make sure you get off to a great start and this part is often the most challenging, so please don't hesitate to come to us immediately with any setup concerns!
+- Hour/Day Policy
+  - If you've been stuck on something for two hours, ask a fellow intern!
+  - If you've been stuck on something for a full day, ask a mentor!
+- Process for Getting Unstuck
+    1. Search through the available resources in this document (located at the bottom of the page and throughout)
+    2. Google! This is your most valuable resource and learning how to search the internet for your answer is going to be your most valuable skill moving forward! Forum resources like StackOverflow can be extremely helpful. In web development, there's almost always someone who has encountered your problem before. The trick lies in finding that answer!
+    3. Ask an OCAT internship peer
+    4. Ask an OCAT mentor
+- [Code Review](./docs/code_review.md) Guidelines
 
+## Resources
 ### React
 
 - [Intro to React](https://reactjs.org/tutorial/tutorial.html)
