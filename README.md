@@ -1,49 +1,28 @@
-# OCAT
+# OCAT - ITSC Internship Project
 
-## Purpose and Context
+In this project, you will have the opportunity to explore the basics of web development operations as carried out at the ITSC. You will learn about some of the core technologies we use to build web application and ecosystems such as [React.js](https://reactjs.org/), [Node.js](https://nodejs.org/en/) with the [Express](http://expressjs.com/) Framework, and other libraries and tools. Below, you'll find a comprehensive list of all the technologies used in this project.
 
-- Web Development
-  - The goal of this application is for you to explore and demonstrate understanding of web development using some of our core technologies. You must use React.js on the client-side, a Bootstrap template for the UI, Node.js/Express for the back-end, Sequelize as the ORM, PostgreSQL as the database, and Bcrypt to encrypt passwords in PostgreSQL. You must also create a git repository on github.com and push all of your code there frequently.
+This project is a minified system of a the ORAS system, a project used by probation officers to assess the offender's likelihood of recommitting a crime (recidivism) and the factors in an offender's life that are directly related to recidivism (criminogenic needs). You'll be building a user interface to create and review assessments.
 
-- Criminal Justice
-  - The Risk Assessment (RA) System is a Web-based Application that allows for assessing the risk of offender [recidivism](https://nij.ojp.gov/topics/corrections/recidivism). By assessing the likelihood that an offender might commit another offense, the system helps officers determine how best to help the offender moving forward. In RA, we do this by automatically generating caseplans, reports, and maintaining the full timeline of an offender's record while they exist in the system. This process was developed based on research performed by the UC Corrections Institute (UCCI) and has been proven to reduce the recidivism of offenders over time.
+Make sure you review the [Guidelines section](#guidelines) to learn about when and how you should seek help.
 
-- The OCAT Internship Project
-  - Through OCAT, you will have the opportunity to explore a core piece of ORAS by building an interface for both creating assessments and monitoring assessments previously performed by users. Your ITSC mentors will guide you through this process, but we highly suggest that you make frequent use of your OCAT internship peers. To be clear, we do not want you copying code or handing out answers to other interns. However, this is a collaborative process, and asking questions when you're confused is an important part of learning! On the flip-side of that, teaching someone else or helping them through a problem is the best way to further cement that knowledge in your own mind. So ask questions when you're stuck and help point your fellow teammates in the right direction! Good luck!
+Good luck!
 
-## ITSC Guidelines
+## About Web Development
 
-- Setup
-  - PLEASE ask if you're having trouble setting up your project repository, project board, first branch, or development environment. The mentors are here to help you! We want to make sure you get off to a great start and this part is often the most challenging, so please don't hesitate to come to us immediately with any setup concerns!
-- Hour/Day Policy
-  - If you've been stuck on something for two hours, ask a fellow intern!
-  - If you've been stuck on something for a full day, ask a mentor!
-- Process for Getting Unstuck
-    1. Search through the available resources in this document (located at the bottom of the page and throughout)
-    2. Google! This is your most valuable resource and learning how to search the internet for your answer is going to be your most valuable skill moving forward! Forum resources like StackOverflow can be extremely helpful. In web development, there's almost always someone who has encountered your problem before. The trick lies in finding that answer!
-    3. Ask an OCAT internship peer
-    4. Ask an OCAT mentor
+At a high-level, every web application is composed of different elements:
 
-## Code Review Guidelines (reference this later when doing peer review)
+- **Front-end**: that's the code the runs on the user's browser. It interfaces with the user's interactions, captures their input and sends it to the application server or the backend.
+  - We use React.js to build the user interface. It allows us to combine HTML, CSS, and JavaScript to build UI components and pages.
+  - We use libraries and toolkits like Bootstrap and React Bootstrap to make it look nice.
+- **Back-end**: This code runs on the server, it receives the user requests and inputs, processes it, stores it in a database and sends it back to the user when needed.
+  - Here we use Node.js and Express to build the server. Node.js is a JavaScript runtime environment that allows us to run JavaScript code outside of the browser. Express is a web application framework for Node.js that allows us to build web applications and APIs.
+- **Database**: This is where the data is stored. It's a collection of tables that store information about the users, the application, and the interactions between them.
+  - We can use any type of database here like MS SQL Server, MySQL, or PostgreSQL. We use PostgreSQL because it's open-source and free.
 
-- Every [Issue](./docs/issues.md) should be code reviewed by another OCAT internship-peer
-  - Making a Pull Request
-    - Create a Pull Request (PR) from your development branch (your current branch) into main (the main branch)
-      - [Creating a Pull Request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
-    - Reach out to one of your fellow OCAT interns and ask them nicely to review your code. Include a link to the Pull Request you'd like them to review
-    - Take any suggestions with a grain of salt. Remember, this is YOUR application. Make any changes you agree with and then merge the Pull Request
-  - Reviewing a Pull Request (PR)
-    - [Reviewing a Pull Request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews)
-    - Go the link supplied by whichever OCAT intern has requested a review from you
-    - Look through their code, offering suggestions and critiques
-      - You should try to:
-      - Understand each part of the code and look for ways to improve it
-      - Be kind. Remember that this is someone else's work that they've spent a lot of time on
-      - Balance criticism with praise. It is tempting to only point out the negatives. If you see something you like, tell them!
-      - Feel free to ask questions. In the end, this is a learning process. Feel free to ask questions if you don't understand something in the code.
-  - After a Pull Request (PR) has been approved, merge it and move on
-    - [Merging a Pull Request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request)
-    - Once merged, create a new branch from main and start on your next issue
+Each one of those layers will need to communicate with the others. For example, the front-end will need to send requests to the back-end to get data from the database. The back-end will need to send requests to the database to store data. The database will need to send requests to the back-end to retrieve data. And so on.
+
+You'll find that we need to use a number of other libraries and tools to compliment our work. For example, we will need to encrypt passwords to be able to save it securely in the database. We will need to use a version control system like Git/GitHub to keep track of our code and collaborate with others. And so on.
 
 ## Technologies
 
@@ -78,20 +57,17 @@ The application must be created with two "layers" using an API model (the "skele
 - The below diagram resembles what you should attempt to reproduce:
 ![OCAT Sample Architecture](./docs/attachments/OCAT_Architecture.png)
 
-## Navigating the OCAT File Structure
+# 🏁 Let's Get Started
 
-We have created some CodeTours for you to help you understand the first couple tasks.
+## Tasks/Milestones
 
-Make sure you have installed the recommended extensions, then see the [Starting CodeTours Documentation](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour#starting-tours) for instructions on viewing our tours
+We will need to complete the following tasks to complete the project. Each task will be broken down into smaller milestones. You will be able to track your progress using the provided Project Board template.
 
-## Roles
+1. [Project Setup](#a-project-setup)
+2. [Setup Development Environment](#b-setup-development-environment)
+3. [Build the Features](#c-features)
 
-- User
-- Supervisor
-
-## Assignments
-
-### A. Github Setup
+### A. Project Setup
 
 1. Copy the Template Repository
 NOTE: You can name this whatever you want, just make certain that you leave it "Public" so that others can view your code
@@ -114,10 +90,17 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
 
 ### B. Setup Development Environment
 
+#### Navigating the OCAT File Structure
+
+We have created some CodeTours for you to help you understand the first couple tasks.
+
+Make sure you have installed the recommended extensions, then see the [Starting CodeTours Documentation](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour#starting-tours) for instructions on viewing our tours
+
 1. Clone your new repository
     - [Cloning a Repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 2. [Install NodeJS 16.x](docs/install_nodejs.md) on your computer
-3. [Install PostgreSQL](docs/install_postgres.md) using the [instructions in our docs](docs/install_postgres.md)
+3. Duplicate the `packages/api/config/default.json` file to `packages/api/config/local.json` and update the database credentials with the ones emailed to you.
+   - You can also install PostgreSQL database and setup a local database instance if you prefer. See [this guide](docs/install_postgres.md) for instructions. in this case, you won't need to change the configuration.
 4. Running the project
     - Navigate into the packages/client/ directory ``cd packages/client/``
     - ``npm install``
@@ -171,76 +154,79 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
     - Soft deletes are built into Sequelize
 6. Prepare your presentation!
 
+## Guidelines
+
+- Setup
+  - PLEASE ask if you're having trouble setting up your project repository, project board, first branch, or development environment. The mentors are here to help you! We want to make sure you get off to a great start and this part is often the most challenging, so please don't hesitate to come to us immediately with any setup concerns!
+- Hour/Day Policy
+  - If you've been stuck on something for two hours, ask a fellow intern!
+  - If you've been stuck on something for a full day, ask a mentor!
+- Process for Getting Unstuck
+    1. Search through the available resources in this document (located at the bottom of the page and throughout)
+    2. Google! This is your most valuable resource and learning how to search the internet for your answer is going to be your most valuable skill moving forward! Forum resources like StackOverflow can be extremely helpful. In web development, there's almost always someone who has encountered your problem before. The trick lies in finding that answer!
+    3. Ask an OCAT internship peer
+       1. We encourage that you help each other, but please do not just copy each other's code. This is a collaborative process, and asking questions when you're confused is an important part of learning! On the flip-side of that, teaching someone else or helping them through a problem is the best way to further cement that knowledge in your own mind. So ask questions when you're stuck and help point your fellow teammates in the right direction!
+    4. Ask an OCAT mentor
+- [Code Review](./docs/code_review.md) Guidelines
+  - Please follow the code review guidelines when submitting your code for review. This will help ensure that your code is reviewed in a timely manner and that you get the most out of your code review experience.
+
 ## Resources
 
-### React
+- **React**
+  - [Intro to React](https://reactjs.org/tutorial/tutorial.html)
+  - [Main Concepts](https://reactjs.org/docs/hello-world.html)
+  - Video: [React Tutorial for Beginners](https://www.youtube.com/watch?v=dGcsHMXbSOA)
 
-- [Intro to React](https://reactjs.org/tutorial/tutorial.html)
-- [Main Concepts](https://reactjs.org/docs/hello-world.html)
-- Video: [React Tutorial for Beginners](https://www.youtube.com/watch?v=dGcsHMXbSOA)
+- **React Routing**
+  - [React Router](https://www.reactrouter.com)
+  - [react-router-dom's npm page](https://www.npmjs.com/package/react-router-dom)
+  - Video: [React Router Tutorial](https://www.youtube.com/watch?v=Law7wfdg_ls)
 
-### React Routing
+- **Bootstrap**
+  - [Bootstrap Documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+  - [Bootstrap Templates](https://github.com/therebelrobot/awesome-bootstrap#templates)
+  - Video: [Make a React Website with Bootstrap - Beginners](https://www.youtube.com/watch?v=RcfvUWJqHOs)
 
-- [React Router](https://www.reactrouter.com)
-- [react-router-dom's npm page](https://www.npmjs.com/package/react-router-dom)
-- Video: [React Router Tutorial](https://www.youtube.com/watch?v=Law7wfdg_ls)
+- ****Express****
+  - [Express API Reference](http://expressjs.com/en/4x/api.html)
+  - Video: [Learn Express & Node.js in 15 Minutes](https://www.youtube.com/watch?v=JlgKybraoy4)
 
-### Bootstrap
+- **Sequelize (ORM)**
+  - [API Reference](https://sequelize.org/api/v6/identifiers)
+  - [What is Sequelize?](https://www.educative.io/answers/what-is-sequelizejs)
+  - [Using Sequelize with TypeScript](https://sequelize.org/docs/v6/other-topics/typescript/)
+  - [Sequelize Example and Model Builder](https://sequelizeui.app/schema/employees)
+  - [Sequelize's npm page](https://www.npmjs.com/package/sequelize)
+  - Video: [Sequelize Tutorial - Getting Started with Sequelize and PostgreSQL](https://www.youtube.com/watch?v=p-yKR7GusqM)
 
-- [Bootstrap Documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
-- [Bootstrap Templates](https://github.com/therebelrobot/awesome-bootstrap#templates)
-- Video: [Make a React Website with Bootstrap - Beginners](https://www.youtube.com/watch?v=RcfvUWJqHOs)
+- **React.js HTTP Requests with Axios**
+  - [Using Axios with React](https://www.digitalocean.com/community/tutorials/react-axios-react)
+  - [Axios' npm page](https://www.npmjs.com/package/axios)
+  - Video: [How to use Axios with React](https://www.youtube.com/watch?v=oQnojIyTXb8)
 
-### Express
+- **React Hook Form**
+  - [Main Page](https://react-hook-form.com/)
+  - [Examples](https://github.com/react-hook-form/react-hook-form/tree/master/examples)
+  - [react-hook-form's npm page](https://www.npmjs.com/package/react-hook-form)
+  - Video: [React Hook Form Tutorial](https://www.youtube.com/watch?v=bU_eq8qyjic)
 
-- [Express API Reference](http://expressjs.com/en/4x/api.html)
-- Video: [Learn Express & Node.js in 15 Minutes](https://www.youtube.com/watch?v=JlgKybraoy4)
+- **React Table**
+  - [Main Page](https://react-table.tanstack.com/)
+  - [How to Use React Table](https://codehandbook.org/how-to-use-react-table-in-react-web-app/)
+  - [react-table's npm page](https://www.npmjs.com/package/react-table)
 
-### Sequelize (ORM)
+- **Bcrypt**
+  - [Hashing Passwords with Node.js and Bcrypt](https://www.abeautifulsite.net/hashing-passwords-with-nodejs-and-bcrypt)
+  - [User Authentication using Bcrypt](https://medium.com/@holtkam2/add-user-authentication-to-your-node-expressjs-application-using-bcrypt-81bb0f618ab3)
+  - [bcrypt npm page](https://www.npmjs.com/package/bcrypt)
 
-- [API Reference](https://sequelize.org/api/v6/identifiers)
-- [What is Sequelize?](https://www.educative.io/answers/what-is-sequelizejs)
-- [Using Sequelize with TypeScript](https://sequelize.org/docs/v6/other-topics/typescript/)
-- [Sequelize Example and Model Builder](https://sequelizeui.app/schema/employees)
-- [Sequelize's npm page](https://www.npmjs.com/package/sequelize)
-- Video: [Sequelize Tutorial - Getting Started with Sequelize and PostgreSQL](https://www.youtube.com/watch?v=p-yKR7GusqM)
-
-### React.js HTTP Requests with Axios
-
-- [Using Axios with React](https://www.digitalocean.com/community/tutorials/react-axios-react)
-- [Axios' npm page](https://www.npmjs.com/package/axios)
-- Video: [How to use Axios with React](https://www.youtube.com/watch?v=oQnojIyTXb8)
-
-### React Hook Form
-
-- [Main Page](https://react-hook-form.com/)
-- [Examples](https://github.com/react-hook-form/react-hook-form/tree/master/examples)
-- [react-hook-form's npm page](https://www.npmjs.com/package/react-hook-form)
-- Video: [React Hook Form Tutorial](https://www.youtube.com/watch?v=bU_eq8qyjic)
-
-### React Table
-
-- [Main Page](https://react-table.tanstack.com/)
-- [How to Use React Table](https://codehandbook.org/how-to-use-react-table-in-react-web-app/)
-- [react-table's npm page](https://www.npmjs.com/package/react-table)
-
-### Bcrypt
-
-- [Hashing Passwords with Node.js and Bcrypt](https://www.abeautifulsite.net/hashing-passwords-with-nodejs-and-bcrypt)
-- [User Authentication using Bcrypt](https://medium.com/@holtkam2/add-user-authentication-to-your-node-expressjs-application-using-bcrypt-81bb0f618ab3)
-- [bcrypt npm page](https://www.npmjs.com/package/bcrypt)
-
-### PostgreSQL
-
-- [Documentation](https://www.postgresql.org/)
-- Access the Database
-  - Windows developers should use -> [pgAdmin](https://www.pgadmin.org/download/)
-  - Mac developers should use -> [postico](https://eggerapps.at/postico/)
+- **PostgreSQL**
+  - [Documentation](https://www.postgresql.org/)
+  - Access the Database
+    - Windows developers should use -> [pgAdmin](https://www.pgadmin.org/download/)
+    - Mac developers should use -> [postico](https://eggerapps.at/postico/)
 
 ## Advanced Resources
-
-- Microservice Advanced Concepts
-  - [Orchestration vs Choreography](https://www.softobiz.com/microservice-orchestration-vs-choreography/)
 
 - Design principles
   - SOLID: [The First Five Principles of Object Oriented Design](https://scotch.io/bar-talk/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
