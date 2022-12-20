@@ -1,14 +1,11 @@
-# OCAT
+# OCAT - ITSC Internship Project
 
+In this project, you will have the opportunity to explore a core piece of ORAS by building an interface for both creating assessments and monitoring assessments previously performed by users. 
+Your ITSC mentors will guide you through this process, but we highly suggest that you make frequent use of your OCAT internship peers. To be clear, we do not want you copying code or handing out answers to other interns. However, this is a collaborative process, and asking questions when you're confused is an important part of learning! On the flip-side of that, teaching someone else or helping them through a problem is the best way to further cement that knowledge in your own mind. So ask questions when you're stuck and help point your fellow teammates in the right direction! Good luck!
 ## Purpose and Context
 
 - Web Development
   - The goal of this application is for you to explore and demonstrate understanding of web development using some of our core technologies. You must use React.js on the client-side, a Bootstrap template for the UI, Node.js/Express for the back-end, Sequelize as the ORM, PostgreSQL as the database, and Bcrypt to encrypt passwords in PostgreSQL. You must also create a git repository on github.com and push all of your code there frequently.
-
-- The OCAT Internship Project
-  - Through OCAT, you will have the opportunity to explore a core piece of ORAS by building an interface for both creating assessments and monitoring assessments previously performed by users. Your ITSC mentors will guide you through this process, but we highly suggest that you make frequent use of your OCAT internship peers. To be clear, we do not want you copying code or handing out answers to other interns. However, this is a collaborative process, and asking questions when you're confused is an important part of learning! On the flip-side of that, teaching someone else or helping them through a problem is the best way to further cement that knowledge in your own mind. So ask questions when you're stuck and help point your fellow teammates in the right direction! Good luck!
-
-
 
 ## Technologies
 
