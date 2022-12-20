@@ -75,13 +75,13 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
         - [OCAT_Intern_Template](https://github.com/UC-ITSC/OCAT_Intern_Template)
     - Resources:
         - [Creating a Repository from a Template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
-1. Copy the Template Project Board
+2. Copy the Template Project Board
     - NOTE: This is something you should keep constantly up-to-date. It is how we will track your progress, and it will facilitate code review and collaboration with your OCAT internship peers.
         - Template:
             - [OCAT Project Board](https://github.com/UC-ITSC/OCAT_Intern_Template/projects/1)
         - Resources:
             - [Copying a Project Board](https://docs.github.com/en/github/managing-your-work-on-github/copying-a-project-board)
-2. Add the Provided Issues to your Project Board
+3. Add the Provided Issues to your Project Board
     - Issues:
         - [OCAT Issues](./docs/issues.md)
     - Resources:
