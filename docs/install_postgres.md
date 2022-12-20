@@ -13,7 +13,13 @@
     - Next run this command:
 
        ```bash
-       docker run --rm -it -v pg:/pg alpine sed -i "s/host all all all md5/host all all all trust/" /pg/pgdata/pg_hba.conf && docker restart postgres
+       docker run --rm -it -v pg:/pg alpine sed -i "s/host all all all md5/host all all all trust/" /pg/pgdata/pg_hba.conf
+       ```
+
+    - Next run this command:
+
+       ```bash
+       docker restart postgres
        ```
 
     - Next run this command:
