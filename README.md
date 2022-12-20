@@ -94,7 +94,8 @@ Make sure you have installed the recommended extensions, then see the [Starting 
 1. Clone your new repository
     - [Cloning a Repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 2. [Install NodeJS 16.x](docs/install_nodejs.md) on your computer
-3. [Install PostgreSQL](docs/install_postgres.md) using the [instructions in our docs](docs/install_postgres.md)
+3. Update the database connection configuration in `packages/api/config/default.json` with the credentials emailed to you.
+   1. You can also install PostgreSQL database and setup a local database instance if you prefer. See [this guide](docs/install_postgres.md) for instructions. in this case, you won't need to change the configuration.
 4. Running the project
     - Navigate into the packages/client/ directory ``cd packages/client/``
     - ``npm install``
