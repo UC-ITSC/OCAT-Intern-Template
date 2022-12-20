@@ -7,11 +7,14 @@ This project is a minified system of a the ORAS system, a project used by probat
 Make sure you review the [Guidelines section](#guidelines) to learn about when and how you should seek help.
 
 Good luck!
-## About Web Development 
+
+## About Web Development
+
 At a high-level, every web application is composed of different elements:
+
 - **Front-end**: that's the code the runs on the user's browser. It interfaces with the user's interactions, captures their input and sends it to the application server or the backend.
   - We use React.js to build the user interface. It allows us to combine HTML, CSS, and JavaScript to build UI components and pages.
-  - We use libraries and toolkits like Bootstrap and React Bootstrap to make it look nice. 
+  - We use libraries and toolkits like Bootstrap and React Bootstrap to make it look nice.
 - **Back-end**: This code runs on the server, it receives the user requests and inputs, processes it, stores it in a database and sends it back to the user when needed.
   - Here we use Node.js and Express to build the server. Node.js is a JavaScript runtime environment that allows us to run JavaScript code outside of the browser. Express is a web application framework for Node.js that allows us to build web applications and APIs.
 - **Database**: This is where the data is stored. It's a collection of tables that store information about the users, the application, and the interactions between them.
@@ -54,14 +57,15 @@ The application must be created with two "layers" using an API model (the "skele
 - The below diagram resembles what you should attempt to reproduce:
 ![OCAT Sample Architecture](./docs/attachments/OCAT_Architecture.png)
 
-# 🏁 Let's Get Started!
+# 🏁 Let's Get Started
+
 ## Tasks/Milestones
+
 We will need to complete the following tasks to complete the project. Each task will be broken down into smaller milestones. You will be able to track your progress using the provided Project Board template.
 
 1. [Project Setup](#a-project-setup)
 2. [Setup Development Environment](#b-setup-development-environment)
 3. [Build the Features](#c-features)
-
 
 ### A. Project Setup
 
@@ -85,6 +89,7 @@ NOTE: You can name this whatever you want, just make certain that you leave it "
         - [Adding Issues to a Project Board](https://docs.github.com/en/github/managing-your-work-on-github/adding-issues-and-pull-requests-to-a-project-board#adding-issues-and-pull-requests-to-a-project-board-from-the-sidebar)
 
 ### B. Setup Development Environment
+
 #### Navigating the OCAT File Structure
 
 We have created some CodeTours for you to help you understand the first couple tasks.
@@ -150,6 +155,7 @@ Make sure you have installed the recommended extensions, then see the [Starting 
 6. Prepare your presentation!
 
 ## Guidelines
+
 - Setup
   - PLEASE ask if you're having trouble setting up your project repository, project board, first branch, or development environment. The mentors are here to help you! We want to make sure you get off to a great start and this part is often the most challenging, so please don't hesitate to come to us immediately with any setup concerns!
 - Hour/Day Policy

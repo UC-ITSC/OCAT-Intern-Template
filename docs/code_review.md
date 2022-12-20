@@ -1,4 +1,4 @@
-## Code Review Guidelines (reference this later when doing peer review)
+# Code Review Guidelines (reference this later when doing peer review)
 
 - Every [Issue](./issues.md) should be code reviewed by another OCAT internship-peer
   - Making a Pull Request
