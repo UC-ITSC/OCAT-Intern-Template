@@ -12,16 +12,17 @@
     "./packages/client"
   ],
   "cSpell.words": [
+    "caseplans",
+    "criminogenic",
     "Fluffykins",
     "ITSC",
     "Microservice",
     "Microservices",
     "OCAT",
     "ORAS",
-    "UCCI",
-    "caseplans",
     "postgres",
-    "postico"
+    "postico",
+    "UCCI"
   ],
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active"
