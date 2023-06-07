@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Controller, useForm } from 'react-hook-form';
-import { useEffect } from 'react';
-import axios from 'axios';
+import { useForm } from 'react-hook-form';
 import { AssessmentService } from '../../services/AssessmentService';
+
 const questions = [
   {
     label: `Previous contact with the Cat Judicial System`,
@@ -48,10 +47,8 @@ const questions = [
 ];
 
 export const NewAssessment = () => {
-  const { control, handleSubmit, register } = useForm();
+  const { handleSubmit } = useForm();
   const [ totalScore, setTotalScore ] = useState(0);
-  const [ riskLevel, setRiskLevel ] = useState(0);
-  const [ auditLog, setAuditLog ] = useState(``);
 
   const onSubmit = async (data) => {
     console.log(data);
@@ -59,31 +56,9 @@ export const NewAssessment = () => {
   };
 
   const handleScoreChange = (name, value) => {
+    console.log(parseInt(value));
     const score = parseInt(value);
-    setTotalScore((prevScore) => {
-      const updatedScore = prevScore + score;
-      const newRiskLevel = calculateRiskLevel(updatedScore);
-      setRiskLevel(newRiskLevel);
-      return updatedScore;
-    });
-  };
-
-  useEffect(() => {
-    // Update the audit log whenever the total score changes
-    const currentDate = new Date().toLocaleString(`en-US`, {
-      timeZone: `America/New_York`,
-      timeZoneName: `short`,
-    });
-    setAuditLog(currentDate);
-  }, [ totalScore ]);
-
-  const calculateRiskLevel = (score) => {
-    if (score >= 4) {
-      return `High`;
-    } else if (score >= 2) {
-      return `Medium`;
-    }
-    return `Low`;
+    setTotalScore((prevScore) => prevScore + score);
   };
 
   return (
@@ -95,16 +70,21 @@ export const NewAssessment = () => {
           <div className="form-group col-md-6">
             <label>
               Cat Name:
-              <input type="text" className="form-control" placeholder="Enter Cat name" required
-                {...register(`catNameValue`)} />
-
+              <input type="text" className="form-control" placeholder="Enter Cat name" required />
             </label>
           </div>
           <div className="form-group col-md-6">
             <label>
               Cat Date of Birth:
-              <input type="date" className="form-control" placeholder="Cat Date of Birth" required
-                {...register(`dob`)} />
+              <input type="date" className="form-control" placeholder="Cat Date of Birth" required />
+            </label>
+          </div>
+        </div>
+        <div className="form-row">
+          <div className="form-group col-md-6">
+            <label>
+              Cat Name:
+              <input type="text" className="form-control" placeholder="Enter Cat name" required />
             </label>
           </div>
         </div>
@@ -116,33 +96,23 @@ export const NewAssessment = () => {
             <div>
               {question.options.map((option) =>
                 <React.Fragment key={option.value}>
-                  <Controller
+                  <input
+                    type="radio"
+                    id={option.value}
                     name={question.name}
-                    control={control}
-                    defaultValue={``}
-                    render={({ field }) =>
-                      <React.Fragment>
-                        <input
-                          type="radio"
-                          id={option.value}
-                          value={option.value}
-                          onChange={(e) => {
-                            field.onChange(e);
-                            handleScoreChange(question.name, e.target.value);
-                          }}
-                          checked={field.value === option.value}
-                        />
-                        <label htmlFor={option.value}>{option.label}</label>
-                      </React.Fragment>}
+                    value={option.value}
+                    onChange={(e) => handleScoreChange(question.name, e.target.value)}
                   />
+                  <label htmlFor={option.value}>{option.label}</label>
                 </React.Fragment>)}
             </div>
             <h1> </h1>
           </React.Fragment>)}
+
         <Button variant="primary" type="submit">
           Submit
         </Button>
-
+        <h3>Total Score: {totalScore}</h3>
       </Form>
     </div>
   );

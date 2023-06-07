@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Controller, useForm } from 'react-hook-form';
-import { useEffect } from 'react';
-import axios from 'axios';
+import { useForm } from 'react-hook-form';
 import { AssessmentService } from '../../services/AssessmentService';
+
 const questions = [
   {
     label: `Previous contact with the Cat Judicial System`,
@@ -48,9 +47,9 @@ const questions = [
 ];
 
 export const NewAssessment = () => {
-  const { control, handleSubmit, register } = useForm();
+  const { handleSubmit, register } = useForm();
   const [ totalScore, setTotalScore ] = useState(0);
-  const [ riskLevel, setRiskLevel ] = useState(0);
+  const [ riskLevel, setRiskLevel ] = useState(``);
   const [ auditLog, setAuditLog ] = useState(``);
 
   const onSubmit = async (data) => {
@@ -91,12 +90,13 @@ export const NewAssessment = () => {
       <Form onSubmit={handleSubmit(onSubmit)}>
         <h1>Cat Behavioral Instrument</h1>
         <h2>Cat Details</h2>
+        <h2>Cat Details</h2>
         <div className="form-row">
           <div className="form-group col-md-6">
             <label>
               Cat Name:
               <input type="text" className="form-control" placeholder="Enter Cat name" required
-                {...register(`catNameValue`)} />
+                {...register(`catName`)} />
 
             </label>
           </div>
@@ -109,40 +109,31 @@ export const NewAssessment = () => {
           </div>
         </div>
         <h2>Questions & Responses</h2>
-        <h1> </h1>
+        {/* Questions and responses */}
         {questions.map((question, index) =>
           <React.Fragment key={index}>
             <label htmlFor={question.name}>{`${index + 1}. ${question.label}`}</label>
             <div>
               {question.options.map((option) =>
                 <React.Fragment key={option.value}>
-                  <Controller
+                  <input
+                    type="radio"
+                    id={option.value}
                     name={question.name}
-                    control={control}
-                    defaultValue={``}
-                    render={({ field }) =>
-                      <React.Fragment>
-                        <input
-                          type="radio"
-                          id={option.value}
-                          value={option.value}
-                          onChange={(e) => {
-                            field.onChange(e);
-                            handleScoreChange(question.name, e.target.value);
-                          }}
-                          checked={field.value === option.value}
-                        />
-                        <label htmlFor={option.value}>{option.label}</label>
-                      </React.Fragment>}
+                    value={option.value}
+                    onChange={(e) => handleScoreChange(question.name, e.target.value)}
+                    ref={register} // Use register directly instead of spreading
                   />
+                  <label htmlFor={option.value}>{option.label}</label>
                 </React.Fragment>)}
             </div>
             <h1> </h1>
           </React.Fragment>)}
+        <h3>Total Score: {totalScore}</h3>
+        <h3>Risk Level: {riskLevel}</h3>
         <Button variant="primary" type="submit">
           Submit
         </Button>
-
       </Form>
     </div>
   );

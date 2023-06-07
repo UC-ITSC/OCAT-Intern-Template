@@ -1,13 +1,61 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+  background-color: #f2f2f2; /* Set your desired background color here */
+  }
+  
+  code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  }
+  
+  h1 {
+  text-align: center;
+  }
+  
+  .form-group {
+  text-align: justify;
+  }
+  
+  .form-row {
+  display: flex;
+  justify-content: center;
+  }
+  
+  .form-group.col-md-6 {
+  width: 50%;
+  }
+  
+  label {
+  display: block;
+  margin-bottom: 10px;
+  }
+  
+  input[type='text'],
+  input[type='date'] {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  }
+  
+  input[type='radio'] {
+  margin-right: 5px;
+  }
+  
+  button[type='submit'] {
+  display: block;
+  margin-top: 10px;
+  background-color: #664caf; /* Set your desired button background color here */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+  
+  button[type='submit']:hover {
+  background-color: #45a049; /* Set your desired button hover background color here */
+  }
