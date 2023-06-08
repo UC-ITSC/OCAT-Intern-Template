@@ -20,7 +20,7 @@
         }
       },
       "description": "# React Router - /assessment/list\n\nClick the \"Insert Code\" button below to add the AssessmentList component in the App.jsx Site Router\n\n```jsx\n{\n  element: <AssessmentList />,\n  path: `/assessment/list`\n}\n```",
-      "line": 24
+      "line": 30
     },
     {
       "file": "packages/client/src/pages/Assessments/AssessmentList.jsx",
