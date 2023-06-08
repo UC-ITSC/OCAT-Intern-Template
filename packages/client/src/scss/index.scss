@@ -3,59 +3,91 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f2f2f2; /* Set your desired background color here */
-  }
-  
-  code {
+  background-color: #0e101c; /* Set your desired background color here */
+}
+
+code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-  }
-  
-  h1 {
+}
+
+h1 {
   text-align: center;
-  }
-  
-  .form-group {
+  color: white;
+  margin-top: 80px;
+  font-size: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(79, 98, 148);
+}
+
+.form-group {
   text-align: justify;
-  }
-  
-  .form-row {
+}
+
+.form-row {
   display: flex;
   justify-content: center;
-  }
-  
-  .form-group.col-md-6 {
+}
+
+.form-group.col-md-6 {
   width: 50%;
-  }
-  
-  label {
+}
+
+label {
   display: block;
   margin-bottom: 10px;
-  }
-  
-  input[type='text'],
-  input[type='date'] {
+  color: rgb(44, 3, 0); /* Update the color value here */
+}
+
+input[type='text'],
+input[type='date'] {
   width: 100%;
   padding: 5px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid white;
   border-radius: 4px;
-  }
-  
-  input[type='radio'] {
+}
+
+input[type='radio'] {
   margin-right: 5px;
-  }
-  
-  button[type='submit'] {
+}
+
+button[type='submit'] {
   display: block;
   margin-top: 10px;
-  background-color: #664caf; /* Set your desired button background color here */
+  background-color: #ec5990; /* Set your desired button background color here */
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
-  }
-  
-  button[type='submit']:hover {
-  background-color: #45a049; /* Set your desired button hover background color here */
-  }
+}
+
+button[type='submit']:hover {
+  background-color: #171191; /* Set your desired button hover background color here */
+}
+
+.assessment-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.assessment-table th,
+.assessment-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  color: rgb(21, 21, 21);
+}
+
+.assessment-table th {
+  background-color: #b3c171;
+}
+
+.assessment-table .even-row {
+  background-color: #a0a0c2;
+}
+
+.assessment-table .odd-row {
+  background-color: #f1eeee;
+}

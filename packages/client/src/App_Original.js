@@ -8,21 +8,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const router = createBrowserRouter([
   {
-    element: <AssessmentList />,
+    element: <DashboardBulletin />,
     path: `/`,
   },
   {
     element: <NewAssessment />,
     path: `/assessment/new`,
   },
-  {
-    element: <AssessmentList />,
-    path: `/assessment/list`,
-  },
+
 ]);
 
-const App = () =>
-  <SiteWrapper>
-    <RouterProvider router={router} />
-  </SiteWrapper>;
+const App = () => <SiteWrapper>
+  <RouterProvider router={router} />
+</SiteWrapper>;
+
 export default App;

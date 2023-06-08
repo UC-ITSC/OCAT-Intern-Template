@@ -90,7 +90,7 @@ export const NewAssessment = () => {
     <div className="d-flex justify-content-center align-items-center" style={{ height: `150vh` }}>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <h1>Cat Behavioral Instrument</h1>
-        <h2>Cat Details</h2>
+        <h2>CatDetails</h2>
         <div className="form-row">
           <div className="form-group col-md-6">
             <label>
