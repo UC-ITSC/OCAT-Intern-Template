@@ -3,6 +3,8 @@ const { Assessment } = require(`../database/models`);
 exports.submit = async (assessment) => {
 
   try {
+    // eslint-disable-next-line no-console
+    console.log(`assessent service accessed`);
     await Assessment.create(assessment);
   } catch (error) {
 
