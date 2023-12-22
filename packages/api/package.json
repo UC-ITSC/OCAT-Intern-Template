@@ -7,7 +7,6 @@
     "start": "nodemon",
     "build": "tsc",
     "lint": "eslint src --ext .js,.ts",
-    "lint:fix": "npm run lint -- --fix",
     "dev": "nodemon"
   },
   "author": "Paul Wilson",

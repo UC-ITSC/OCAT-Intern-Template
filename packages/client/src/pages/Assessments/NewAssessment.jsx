@@ -20,18 +20,12 @@ export const NewAssessment = () => {
     data.riskLevel = calculateRiskLevel(data.score);
 
     const displayData = {
-      instrumentType: data.instrumentType,
-      score: data.score,
-      // eslint-disable-next-line sort-keys
-      riskLevel: data.riskLevel,
-      // eslint-disable-next-line sort-keys
-      catName: data.catName,
-      // eslint-disable-next-line sort-keys
       catDateOfBirth: data.catDateOfBirth,
+      catName: data.catName,
+      instrumentType: data.instrumentType,
+      riskLevel: data.riskLevel,
+      score: data.score,
     };
-
-    // eslint-disable-next-line no-console
-    console.log(`Submitted assessment data:`, displayData);
 
     try {
       await AssessmentService.submit({ assessment: data });
@@ -48,7 +42,7 @@ export const NewAssessment = () => {
 
   const calculateScore = (formData) => {
     let score = 0;
-    // Adjust the scoring logic based on your requirements
+
     score += formData.question1 === `Yes` ? 1 : 0;
     score += formData.question2 === `Yes` ? 1 : 0;
     score += formData.question3 === `10+` ? 1 : 0;

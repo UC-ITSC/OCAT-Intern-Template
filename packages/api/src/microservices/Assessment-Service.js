@@ -2,16 +2,6 @@ const { Assessment } = require(`../database/models`);
 
 exports.submit = async (assessment) => {
 
-  try {
-    // eslint-disable-next-line no-console
-    console.log(`assessent service accessed`);
-    await Assessment.create(assessment);
-  } catch (error) {
-
-    // eslint-disable-next-line no-console
-    console.log(`Error saving the assessment:`, error);
-    throw error;
-  }
 };
 
 exports.getList = async () => {
