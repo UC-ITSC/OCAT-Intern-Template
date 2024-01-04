@@ -3,13 +3,13 @@
   "title": "Task 1 - Create Assessment",
   "steps": [
     {
-      "file": "packages/client/src/pages/Assessments/NewAssessment.jsx",
-      "description": "# Create Form\n\nUse the provided Assessment Info in [docs/assessment_info.md](https://github.com/UC-ITSC/OCAT-Intern-Template/blob/main/docs/assessment_info.md) to create an assessment form for the front-end using the library \"`react-hook-form`\"\n\nInstall and implement \"`react-hook-form`\" by following the [documented instructions](https://www.npmjs.com/package/react-hook-form)\n",
+      "file": "packages/client/package.json",
+      "description": "# Start Application\n\nREMINDER: In order to run the application, you will have to run some commands.\n_______________________________________________\n\nCOMMANDS:\n\nOpen a terminal within vscode and type these commands into that terminal and hit \"enter\" or \"return\":\n\n- Navigate into the OCAT directory (folder) with the command \"`cd packages/client/`\"\n- `npm install`\n- `npm start`\n- Open the browser and go to http://localhost:3000 to verify that your application is running",
       "line": 6
     },
     {
-      "file": "packages/client/package.json",
-      "description": "# Start Application\n\nREMINDER: In order to run the application, you will have to run some commands.\n_______________________________________________\n\nCOMMANDS:\n\nOpen a terminal within vscode and type these commands into that terminal and hit \"enter\" or \"return\":\n\n- Navigate into the OCAT directory (folder) with the command \"`cd packages/client/`\"\n- `npm install`\n- `npm start`\n- Open the browser and go to http://localhost:3000 to verify that your application is running",
+      "file": "packages/client/src/pages/Assessments/NewAssessment.jsx",
+      "description": "# Create Form\n\nUse the provided Assessment Info in [docs/assessment_info.md](https://github.com/UC-ITSC/OCAT-Intern-Template/blob/main/docs/assessment_info.md) to create an assessment form for the front-end using the library \"`react-hook-form`\"\n\nInstall and implement \"`react-hook-form`\" by following the [documented instructions](https://www.npmjs.com/package/react-hook-form)\n",
       "line": 6
     },
     {
