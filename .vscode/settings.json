@@ -1,16 +1,10 @@
 {
   "editor.tabSize": 2,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact"
-  ],
-  "eslint.workingDirectories": [
-    "./packages/api",
-    "./packages/client"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact"],
+  "eslint.workingDirectories": ["./packages/api", "./packages/client"],
   "cSpell.words": [
     "caseplans",
     "criminogenic",
