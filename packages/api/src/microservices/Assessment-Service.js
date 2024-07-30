@@ -2,12 +2,16 @@ const { Assessment } = require(`../database/models`);
 
 exports.submit = async (assessment) => {
   try {
-    console.log(`Creating assessment with data:`, assessment);
-    const newAssessment = await Assessment.create(assessment);
-    return newAssessment;
+  //   console.log(`Creating assessment with data:`, assessment);
+  //   const newAssessment = await Assessment.create(assessment);
+  //   return newAssessment;
+  // } catch (error) {
+  //   console.error(`Error creating assessment`, error.message);
+  //   throw new Error(`Error2 creating assessment`, error);
+  // }
+    await Assessment.create(assessment);
   } catch (error) {
-    console.error(`Error creating assessment`, error.message);
-    throw new Error(`Error creating assessment`, error);
+    throw new Error(`Error creating assessment`);
   }
   // use the sequelize model Assessments from packages/api/src/database/models to save
   // the assessment data in the PostgreSQL database

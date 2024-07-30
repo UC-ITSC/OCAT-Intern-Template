@@ -15,6 +15,10 @@ const router = createBrowserRouter([
     element: <NewAssessment />,
     path: `/assessment/new`,
   },
+  {
+    element: <AssessmentList />,
+    path: `/assessment/list`,
+  },
 
 ]);
 
