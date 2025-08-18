@@ -10,20 +10,32 @@ The API is organized into several key directories:
 
 ```text
 src/
-├── @types/          # TypeScript type definitions for domain entities
+├── types/           # TypeScript type definitions for domain entities
+│   ├── assessments/ # Assessment-related types
+│   ├── shared/      # Shared types and interfaces
+│   └── users/       # User-related types
 ├── application/     # Business logic and application services
 │   ├── contracts/   # Interface definitions and contracts
+│   │   ├── repositories/ # Repository interface definitions
+│   │   └── services/     # Service interface definitions
 │   ├── events/      # Domain events
 │   ├── features/    # Feature-specific use cases organized by domain
+│   │   ├── assessments/  # Assessment features (create, getList)
+│   │   └── users/        # User features (to be implemented)
 │   ├── services/    # Application services
 │   └── utils/       # Utility functions
 ├── infrastructure/  # Infrastructure concerns
 │   ├── di/          # Dependency injection container
 │   ├── http/        # HTTP server setup
 │   ├── logging/     # Logging configuration
-│   ├── sequelize/   # Database models and connection
-│   └── repositories/ # Data access implementations
+│   ├── repositories/ # Data access implementations
+│   └── sequelize/   # Database models and connection
+│       └── models/  # Sequelize model definitions
 ├── presentation/    # HTTP routes and controllers
+│   ├── assessmentRouter.ts # Assessment API routes
+│   ├── pingRouter.ts       # Health check routes
+│   ├── userRouter.ts       # User API routes (placeholder)
+│   └── index.ts           # Route configuration
 └── index.ts         # Application entry point
 ```
 
@@ -31,8 +43,8 @@ src/
 
 The application is organized around the following core domains:
 
-- **Assessments** - Management of cat behavioral assessments, scoring, and risk evaluation
-- **Users** - User authentication and profile management
+- **Assessments** - Management of cat behavioral assessments, scoring, and risk evaluation (partially implemented)
+- **Users** - User authentication and profile management (placeholder - to be implemented)
 
 ### Feature Structure
 
@@ -105,7 +117,7 @@ See the package.json scripts for common development tasks:
 
 ### Users
 
-- `GET /api/users` - User endpoints (to be implemented)
+- `GET /api/users` - User endpoints (placeholder - to be implemented)
 
 ### Health Check
 
@@ -113,7 +125,10 @@ See the package.json scripts for common development tasks:
 
 ## Database Schema
 
-The application uses the existing PostgreSQL schema with the following main tables:
+The application uses PostgreSQL with Sequelize ORM. Currently implemented models:
 
-- `assessments` - Stores assessment data with soft delete support
-- `users` - Stores user account information (to be implemented)
+- `Assessment` - Stores assessment data with soft delete support
+
+Additional tables mentioned in the schema but not yet implemented:
+
+- `users` - User account information (to be implemented)
