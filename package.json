@@ -1,12 +1,37 @@
 {
-  "name": "ocat-template",
+  "name": "ocat",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "type": "module",
   "scripts": {
+    "build": "lerna run build --parallel",
+    "test": "lerna run test --parallel --since",
+    "test:cov": "lerna run test:cov --stream --since",
+    "lint": "lerna run lint --parallel --since",
+    "lint:fix": "lerna run lint:fix --stream --since",
+    "audit": "audit-ci --config .audit-ci.json",
     "check-updates": "ncu --configFileName .check-updates.json",
     "check-updates:fix": "ncu --configFileName .check-updates.json --upgrade --errorLevel 1",
-    "check-updates:all": "ncu --configFileName .check-updates.json --target latest --errorLevel 1"
+    "check-updates:all": "ncu --configFileName .check-updates.json --target latest --errorLevel 1",
+    "prepare": "husky"
   },
   "devDependencies": {
-    "npm-check-updates": "^16.5.1"
+    "@eslint/compat": "^1.3.1",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.32.0",
+    "@stylistic/eslint-plugin": "^5.2.2",
+    "audit-ci": "^7.1.0",
+    "cross-env": "^10.0.0",
+    "eslint": "^9.32.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-import-quotes": "^0.0.1",
+    "eslint-plugin-sort-keys-custom-order": "^2.2.1",
+    "husky": "^9.1.7",
+    "lerna": "^8.2.4",
+    "npm-check-updates": "^18.0.2",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.39.0"
   }
 }

@@ -14,7 +14,7 @@
     },
     {
       "file": "packages/client/src/services/AssessmentService.js",
-      "description": "# Axios Service Request\n\nInside the `AssessmentService.submit()` function, send a POST request to `/api/assessment/submit` using the axios library that contains the assessment data from the front-end form.\n\nThis will go to the back-end Express server in the file [packages/api/src/routes/Assessment/index.js](./packages/api/src/routes/Assessment/index.js)",
+      "description": "# Axios Service Request\n\nInside the `AssessmentService.submit()` function, send a POST request to `/api/assessments` using the axios library that contains the assessment data from the front-end form.\n\nThis will go to the back-end Express server in the file [packages/api/src/routes/assessment.js](./packages/api/src/routes/assessment.js)",
       "line": 6
     },
     {
@@ -25,18 +25,18 @@
     },
     {
       "file": "packages/api/package.json",
-      "description": "# Start Application\n\n1. Open a second terminal window by using the split functionality\n2. Navigate into the API directory (folder) with the command `cd ../packages/api/`\n3. `npm install`\n4. `npm run dev`",
+      "description": "# Start Application\n\n1. Open a second terminal window by using the split functionality\n2. Navigate into the API directory (folder) with the command `cd packages/api/`\n3. `npm install`\n4. `npm run dev`",
       "line": 7
     },
     {
       "file": "packages/api/src/routes/assessment.js",
-      "description": "# API Router - /assessment/submit\n\nReceive the POST request from the front-end server and call the `.submit()` function in [packages/api/src/microservices/Assessment-Service/index.js](./packages/api/src/microservices/Assessment-Service/index.js).  Pass in the assessment data from the request parameters.",
-      "line": 13
+      "description": "# API Router - POST /api/assessments\n\nReceive the POST request from the front-end server and call the `.submit()` function from [packages/api/src/microservices/Assessment-Service.js](./packages/api/src/microservices/Assessment-Service.js). Pass in the assessment data from the request parameters.\n\nUncomment and implement the AssessmentService.submit() call.",
+      "line": 11
     },
     {
       "file": "packages/api/src/microservices/Assessment-Service.js",
-      "description": "# Assessment Microservice\n\nThis step will introduce an ORM (Object-Relational Mapping) tool we use for this project called \"`Sequelize`\"\nUse Sequelize to save the assessment data from the front-end form into the PostgreSQL database.\n\nHINT: use Sequelize's `.create()` function: https://sequelize.org/api/v6/class/src/model.js~model#static-method-create\n",
-      "line": 8
+      "description": "# Assessment Microservice\n\nThis step will introduce an ORM (Object-Relational Mapping) tool we use for this project called \"`Sequelize`\"\nUse Sequelize to save the assessment data from the front-end form into the PostgreSQL database.\n\nHINT: use Sequelize's `.create()` function: https://sequelize.org/api/v6/class/src/model.js~model#static-method-create\n\nAdvanced: You can also explore the new clean architecture structure in packages/api/src/application/features/assessments/create/",
+      "line": 3
     },
     {
       "file": "packages/api/src/microservices/Assessment-Service.js",

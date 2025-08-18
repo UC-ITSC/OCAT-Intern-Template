@@ -1,6 +1,27 @@
 # OCAT - ITSC Internship Project
 
-In this project, you will have the opportunity to explore the basics of web development operations as carried out at the ITSC. You will learn about some of the core technologies we use to build web application and ecosystems such as [React.js](https://reactjs.org/), [Node.js](https://nodejs.org/en/) with the [Express](http://expressjs.com/) Framework, and other libraries and tools. Below, you'll find a comprehensive list of all the technologies used in this project.
+In this project, you will have the opportunity to explore the basics of web development operations as carried out at the ITSC. You will learn about some of the core technologies we use to build web app- **React Table**
+
+- [Main Page](https://react-table.tanstack.com/)
+- [How to Use React Table](https://codehandbook.org/how-to-use-react-table-in-react-web-app/)
+- [react-table's npm page](https://www.npmjs.com/package/react-table)
+
+- **Bcrypt**
+  - [Hashing Passwords with Node.js and Bcrypt](https://www.abeautifulsite.net/hashing-passwords-with-nodejs-and-bcrypt)
+  - [User Authentication using Bcrypt](https://medium.com/@holtkam2/add-user-authentication-to-your-node-expressjs-application-using-bcrypt-81bb0f618ab3)
+  - [bcrypt npm page](https://www.npmjs.com/package/bcrypt)
+
+- **Clean Architecture & Advanced Patterns**
+  - [Clean Architecture by Uncle Bob](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+  - [Dependency Injection in Node.js](https://nodejs.dev/en/learn/nodejs-dependency-injection/)
+  - [Repository Pattern](https://deviq.com/design-patterns/repository-pattern)
+  - [Use Case Pattern](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+
+- **PostgreSQL**
+  - [Documentation](https://www.postgresql.org/)
+  - Access the Database
+    - Windows developers should use -> [pgAdmin](https://www.pgadmin.org/download/)
+    - Mac developers should use -> [postico](https://eggerapps.at/postico/)osystems such as [React.js](https://reactjs.org/), [Node.js](https://nodejs.org/en/) with the [Express](http://expressjs.com/) Framework, and other libraries and tools. Below, you'll find a comprehensive list of all the technologies used in this project.
 
 This project is a minified system of a the ORAS system, a project used by probation officers to assess the offender's likelihood of recommitting a crime (recidivism) and the factors in an offender's life that are directly related to recidivism (criminogenic needs). You'll be building a user interface to create and review assessments.
 
@@ -45,19 +66,36 @@ You'll find that we need to use a number of other libraries and tools to complim
 
 ## Architecture
 
-The application must be created with two "layers" using an API model (the "skeleton" for this has already been provided within the template repository you'll start with). Once the HTML page is rendered, all future communication between the client/server should be done using HTTP requests sending/receiving JSON.
+The application has been structured using Clean Architecture principles with two main layers and an API model. Once the HTML page is rendered, all future communication between the client/server should be done using HTTP requests sending/receiving JSON.
 
-- Client: User interface for interacting with the API (the "front-end" of the application)
-- API: layer that receives requests from the front-end or a 3rd party and processes the request with the database. Allows for outside integration.
+- **Client**: User interface for interacting with the API (the "front-end" of the application)
+- **API**: Layer that receives requests from the front-end and processes them. The API has been restructured to follow modern clean architecture patterns:
+  - **Presentation Layer** (`packages/api/src/presentation/`): HTTP routes and controllers that handle requests
+  - **Application Layer** (`packages/api/src/application/`): Business logic, use cases, and services
+  - **Infrastructure Layer** (`packages/api/src/infrastructure/`): External concerns like database access, caching, and dependency injection
+  - **Domain Types** (`packages/api/src/@types/`): TypeScript type definitions and interfaces
+  - **Legacy Microservices** (`packages/api/src/microservices/`): Backward compatible services for training exercises
   - [Basic API explanation](https://www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/)
   - [CRUD Basics](https://www.codecademy.com/articles/what-is-crud)
-- Microservices: complex layer of services that accept requests from the API and communicate with the database.
-  - [Basic Microservice explanation](https://smartbear.com/solutions/microservices/)
 
-- The below diagram resembles what you should attempt to reproduce:
+### Clean Architecture Benefits
+
+- **Separation of Concerns**: Each layer has a specific responsibility
+- **Dependency Inversion**: Higher-level modules don't depend on lower-level modules
+- **Testability**: Easy to unit test business logic in isolation
+- **Maintainability**: Changes in one layer don't affect others
+- **Scalability**: New features can be added following established patterns
+
+### Training Structure
+
+- **Complete Examples**: Clean architecture structure with proper separation of concerns
+- **Training Skeletons**: Incomplete implementations in microservices with TODO comments and hints
+- **Learning Path**: Start with microservices (legacy approach) then explore clean architecture patterns
+
+The below diagram resembles what you should attempt to reproduce:
 ![OCAT Sample Architecture](./docs/attachments/OCAT_Architecture.png)
 
-# 🏁 Let's Get Started
+## 🏁 Let's Get Started
 
 ## Tasks/Milestones
 
@@ -140,11 +178,17 @@ Make sure you have installed the recommended extensions, then see the [Starting 
         - Score (integer calculated by the sum of all responses)
         - Risk Level (text - low [0-1], medium [2-3], high [4-5] determined by the calculated score)
         - Audit log of when the assessment was created/deleted (datetime with timezone)
+    - API Endpoint: POST `/api/assessments`
+    - Start with the microservices approach in `packages/api/src/microservices/Assessment-Service.js`
+    - Advanced: Explore the clean architecture in `packages/api/src/application/features/assessments/create/`
     - Recommend using [React Hook Form](https://react-hook-form.com/)
 2. Implement a bootstrap style template to make your site look presentable
     - NOTE: Do not spend too much time on this. We want the application to look good but not at the risk of hindering the overall completion of your project
 3. Allow Users and Supervisors to sort/search/filter/review submitted assessments from a list
     - Should only return non-deleted assessments
+    - API Endpoint: GET `/api/assessments`
+    - Start with the microservices approach in `packages/api/src/microservices/Assessment-Service.js`
+    - Advanced: Explore the clean architecture in `packages/api/src/application/features/assessments/getList/`
     - The list should include (at minimum) cat name, cat date of birth, instrument, score, risk level, and creation date
     - Recommend using [React Table](https://www.npmjs.com/package/react-table)
 4. Allow Supervisors to log into the system
