@@ -1,7 +1,7 @@
 import { compare, hash } from 'bcrypt';
 import { generate as generatePassword } from 'generate-password';
 import httpErrors from 'http-errors';
-import { injectable } from 'inversify';
+import { inject, injectable } from 'inversify';
 import { IPasswordService } from '../contracts';
 import { Logger } from '../../infrastructure/logging/logger';
 const { Unauthorized } = httpErrors;
@@ -11,7 +11,7 @@ const PASSWORD_SALT_ROUNDS = 10;
 @injectable()
 export class PasswordService implements IPasswordService {
   public constructor(
-    private readonly logger: Logger,
+    @inject(Logger) private readonly logger: Logger,
   ) { }
 
   public async createRandomPassword(length: number) {

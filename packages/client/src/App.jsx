@@ -1,4 +1,3 @@
-import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { SiteWrapper } from './components';
 import { DashboardBulletin } from './pages/Dashboard/DashboardBulletin';
@@ -8,18 +7,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const router = createBrowserRouter([
   {
-    element: <DashboardBulletin />,
+    element: <SiteWrapper>
+      <DashboardBulletin />
+    </SiteWrapper>,
     path: `/`,
   },
   {
-    element: <NewAssessment />,
+    element: <SiteWrapper>
+      <NewAssessment />
+    </SiteWrapper>,
     path: `/assessment/new`,
   },
-
 ]);
 
-const App = () => <SiteWrapper>
-  <RouterProvider router={router} />
-</SiteWrapper>;
+const App = () => <RouterProvider router={router} />;
 
 export default App;

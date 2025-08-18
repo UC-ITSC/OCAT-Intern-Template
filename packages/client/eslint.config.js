@@ -1,4 +1,4 @@
-import path, { resolve } from 'node:path';
+import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
@@ -6,7 +6,6 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import reactPlugin from 'eslint-plugin-react';
-import tailwindCssPlugin from '@hyoban/eslint-plugin-tailwindcss';
 import { fixupConfigRules, fixupPluginRules } from '@eslint/compat';
 import globals from 'globals';
 import { FlatCompat } from '@eslint/eslintrc';
@@ -30,14 +29,6 @@ export default tseslint.config(
   ...fixupConfigRules(compat.extends(
     `plugin:react-hooks/recommended`,
   )),
-  ...tailwindCssPlugin.configs[`flat/recommended`],
-  {
-    settings: {
-      tailwindcss: {
-        config: resolve(__dirname, `src/index.css`),
-      },
-    },
-  },
   {
     ...reactPlugin.configs.flat.recommended,
     files: [ `**/*.{tsx,jsx}` ],

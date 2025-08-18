@@ -34,7 +34,6 @@
     "@types/config": "^3.3.5",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
-    "@types/joi": "^17.2.3",
     "@types/node": "^22.17.2",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",

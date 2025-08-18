@@ -2,11 +2,11 @@
   "name": "@ocat/client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:4000",
+  "type": "module",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "vite",
+    "preview": "vite preview",
+    "build": "tsc -b && BUILD_PATH='dist' vite build",
     "lint": "eslint src",
     "lint:fix": "npm run lint -- --fix"
   },
@@ -20,21 +20,17 @@
     "sass": "^1.90.0"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.126",
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.7",
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@typescript-eslint/parser": "^5.62.0",
+    "@vitejs/plugin-react": "^5.0.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
-    "react-scripts": "5.0.1",
-    "typescript": "~5.8.3"
+    "typescript": "~5.8.3",
+    "vite": "^7.1.2",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-tsconfig-paths": "^5.1.4"
   },
   "browserslist": {
     "production": [

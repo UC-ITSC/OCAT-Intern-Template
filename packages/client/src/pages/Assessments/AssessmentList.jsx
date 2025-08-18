@@ -12,12 +12,10 @@ export const AssessmentList = () => {
     fetchAssessments();
   }, []);
 
-  return (
-    <div>
-      {/*
+  return <div>
+    {/*
           List goes here
           Please use the library react-table https://www.npmjs.com/package/react-table
       */}
-    </div>
-  );
+  </div>;
 };
