@@ -30,7 +30,7 @@
     },
     {
       "file": "packages/api/src/application/features/assessments/create/useCase.ts",
-      "description": "# API Router - POST /api/assessments\n\nReceive the POST request from the front-end server and call the `.submit()` function from [packages/api/src/infrastructure/repositories/AssessmentRepository.ts](./packages/api/src/infrastructure/repositories/AssessmentRepository.ts). Pass in the assessment data from the request parameters.\n\nUncomment and implement the AssessmentService.submit() call.",
+      "description": "# API Router - POST /api/assessments\n\nReceive the POST request from the front-end server and call the `.create()` function from [packages/api/src/infrastructure/repositories/AssessmentRepository.ts](./packages/api/src/infrastructure/repositories/AssessmentRepository.ts). Pass in the assessment data from the request parameters.\n\nUncomment and implement the AssessmentService.create() call.",
       "line": 11
     },
     {
