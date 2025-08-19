@@ -1,8 +1,8 @@
 import { Assessment, CreateAssessmentDTO } from '../../../types';
 
 export interface IAssessmentRepository {
-  create(assessment: CreateAssessmentDTO): Promise<Assessment>;
-  findAll(): Promise<Assessment[]>;
+  submit(assessment: CreateAssessmentDTO): Promise<Assessment>;
+  getList(): Promise<Assessment[]>;
   delete(id: number): Promise<boolean>;
 }
 
