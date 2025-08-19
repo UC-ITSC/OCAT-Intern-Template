@@ -1,0 +1,62 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Task 2 - View Assessment List",
+  "steps": [
+    {
+      "file": "packages/client/src/App.jsx",
+      "description": "# View Assessment List Issue\n\nMake sure you're starting on the main branch with your latest merged changes\n\n1. [Checkout main](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/managing-branches#switching-between-branches)\n2. [Pull down the most recent changes](https://github.com/git-guides/git-pull)",
+      "line": 18
+    },
+    {
+      "file": "packages/client/src/App.jsx",
+      "selection": {
+        "start": {
+          "line": 20,
+          "character": 9
+        },
+        "end": {
+          "line": 20,
+          "character": 19
+        }
+      },
+      "description": "# React Router - /assessment/list\n\nClick the \"Insert Code\" button below to add the AssessmentList component in the App.jsx Site Router\n\n```jsx\n\n  {\n    element: <SiteWrapper>\n      <AssessmentList />\n    </SiteWrapper>,\n    path: `/assessment/new`,\n  },\n```",
+      "line": 55
+    },
+    {
+      "file": "packages/client/src/pages/Assessments/AssessmentList.jsx",
+      "description": "# Assessment List\n\nFirst, fetch the assessments that you've created on the back-end by using the `getList()` function in the Assessment Service @ [packages/client/src/services/AssessmentService.js](./packages/client/src/services/AssessmentService.js)",
+      "line": 6
+    },
+    {
+      "file": "packages/client/src/services/AssessmentService.js",
+      "description": "# AssessmentService.getList()\n\nInside the `AssessmentService.getList()` function, send a GET request to the Express Router API @ `/api/assessment/list`\n\nThis will go to the back-end Express server @ [packages/api/src/routes/assessment.js](./packages/api/src/routes/assessment.js)",
+      "line": 20
+    },
+    {
+      "file": "packages/api/src/application/features/assessments/getList/useCase.ts",
+      "description": "# API Router - /assessment/list\n\nReceive the GET request from the front-end server and call the `.findAll()` function from [packages/api/src/infrastructure/repositories/AssessmentRepository.ts](./packages/api/src/infrastructure/repositories/AssessmentRepository.ts)\n\nReturn assessment data to the front-end",
+      "line": 34
+    },
+    {
+      "file": "packages/api/src/infrastructure/repositories/AssessmentRepository.ts",
+      "description": "# Assessment Repository\n\nUse Sequelize to fetch the assessment data from the PostgreSQL database and return it to the front-end User Interface (UI).\n\nHINT: use Sequelize's .findAll() function: https://sequelize.org/api/v6/class/src/model.js~model#static-method-findAll\n",
+      "line": 18
+    },
+    {
+      "file": "packages/client/src/pages/Assessments/AssessmentList.jsx",
+      "description": "# Return Data\n\nReturn the assessment data all the way back to the front-end UI\n\nThe data will have to follow the same path in reverse back up:\n\npackages/api/src/microservices > packages/api/src/routes > packages/client/src/services > packages/client/src/pages/Assessments/AssessmentList.jsx",
+      "line": 10
+    },
+    {
+      "file": "packages/client/src/pages/Assessments/AssessmentList.jsx",
+      "description": "# Assessment List component\n\nNow that you have all the assessment data, construct an Assessment List table component using \"`react-table`\".\n\nInstall and implement `react-table` by following [the documentation](https://www.npmjs.com/package/react-table)",
+      "line": 19
+    },
+    {
+      "file": "packages/client/src/pages/Assessments/AssessmentList.jsx",
+      "description": "# Finish Issue\n\n1. Test manually to make sure your table is working properly\n2. [Create a new branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/managing-branches#creating-a-branch)\n3. [Create a pull request into the \"main\" branch](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)\n4. [Get someone to review your pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)\n5. Once happy with your changes, [merge your pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request)\n6. Go to the next issue",
+      "line": 21
+    }
+  ],
+  "ref": "main"
+}
