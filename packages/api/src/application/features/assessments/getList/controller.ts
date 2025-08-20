@@ -13,6 +13,6 @@ export class GetAssessmentListController extends BaseController {
   }
 
   protected async executeImpl(req: Request): Promise<Assessment[]> {
-    return Promise.reject(new Error(`Not implemented`));
+    return this.getAssessmentListUseCase.execute();
   }
 }

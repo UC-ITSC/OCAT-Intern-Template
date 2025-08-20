@@ -17,11 +17,12 @@ export const createAssessmentSchema = Joi.object<CreateAssessmentDTO>({
       'any.required': `Cat name is required`,
       'string.empty': `Cat name is required`,
     }),
-  instrumentType: Joi.string()
+  instrumentType: Joi.number()
+    .integer()
+    .min(0)
     .required()
     .messages({
       'any.required': `Instrument type is required`,
-      'string.empty': `Instrument type is required`,
     }),
 
   riskLevel: Joi.string()

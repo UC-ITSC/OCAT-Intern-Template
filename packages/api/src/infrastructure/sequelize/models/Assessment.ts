@@ -12,7 +12,7 @@ export class Assessment extends Model<
   InferCreationAttributes<Assessment>
 > {
   declare public id: CreationOptional<number>;
-  declare public instrumentType: string;
+  declare public instrumentType: number;
   declare public score: number;
   declare public riskLevel: string;
   declare public catName: string;

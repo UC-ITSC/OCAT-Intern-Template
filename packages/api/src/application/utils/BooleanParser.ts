@@ -57,5 +57,6 @@ const booleanify = (val: string): boolean | string => {
 export const BooleanParser = (req: Request, res: Response, next: NextFunction) => {
   req.query = parseObject(req.query);
   req.body = parseObject(req.body);
+
   next();
 };

@@ -17,7 +17,7 @@ export function createApp(): express.Application {
     nocache(),
     express.json(),
     express.urlencoded({ extended: false }),
-    BooleanParser,
+    // BooleanParser,
   );
 
   // Routes

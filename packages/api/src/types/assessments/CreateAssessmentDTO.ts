@@ -1,7 +1,7 @@
 export interface CreateAssessmentDTO {
   catDateOfBirth: string;
   catName: string;
-  instrumentType: string;
+  instrumentType: number;
   riskLevel: string;
   score: number;
 }

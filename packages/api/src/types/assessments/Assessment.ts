@@ -4,7 +4,7 @@ export interface Assessment {
   catName: string;
   createdAt?: Date;
   deletedAt?: Date | null;
-  instrumentType: string;
+  instrumentType: number;
   riskLevel: string;
   score: number;
   updatedAt?: Date;
