@@ -7,7 +7,7 @@
     - Open a terminal and run this command:
 
        ```bash
-       docker run -p 5432:5432 --name postgres -e POSTGRES_HOST_AUTH_METHOD=trust -e POSTGRES_DB=ocat -v pg:/var/lib/postgresql/data -e POSTGRES_PASSWORD=postgres -d postgres:18
+       docker run -p 5432:5432 --name postgres -e POSTGRES_HOST_AUTH_METHOD=trust -e POSTGRES_DB=ocat -v pg:/var/lib/postgresql -e POSTGRES_PASSWORD=postgres -d postgres:18
        ```
 
     - Now run this command:
@@ -21,7 +21,7 @@
     - Open a terminal and run this command:
 
        ```bash
-       docker run -p 5432:5432 --name postgres -e POSTGRES_DB=ocat -v pg:/var/lib/postgresql/data -e POSTGRES_PASSWORD=postgres -d postgres:18
+       docker run -p 5432:5432 --name postgres -e POSTGRES_DB=ocat -v pg:/var/lib/postgresql -e POSTGRES_PASSWORD=postgres -d postgres:18
        ```
 
     - Now run this command:
