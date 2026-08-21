@@ -16,6 +16,7 @@
     "config": "^4.1.1",
     "cors": "^2.8.5",
     "express": "^5.1.0",
+    "express-query-parser2": "^2.0.1",
     "generate-password": "^1.7.1",
     "helmet": "^8.1.0",
     "http-errors": "^2.0.0",
